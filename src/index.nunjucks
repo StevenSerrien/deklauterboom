@@ -1,9 +1,10 @@
 {% extends '_layouts/base.nunjucks' %}
 
 {% import "_modules/link/link.nunjucks" as link %}
+{% import "_modules/header/header.nunjucks" as header %}
 
 {% block content %}
-<div class="main-container">
+<div class="main-container grid-container">
   <div class="yeogurt-info">
     <h1>Welcome to Yeogurt!</h1>
     <p>
