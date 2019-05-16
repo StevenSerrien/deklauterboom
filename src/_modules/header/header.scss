@@ -1,1 +1,18 @@
 // header styles
+$component: '.header';
+
+$header-spacer-top: 3.1875rem;
+
+#{$component} {
+    height: 50px;
+    display: flex;
+    position: relative;
+    margin-top: $header-spacer-top;
+    &__logo {
+        height: 100%;
+        img {
+            height: inherit;
+            width: auto;
+        }
+    }
+}

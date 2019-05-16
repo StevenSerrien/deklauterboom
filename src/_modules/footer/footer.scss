@@ -1,0 +1,10 @@
+// footer styles
+$component: '.footer';
+
+#{$component} {
+    color: white;
+    font-weight: bold;
+    &__logo {
+
+    }
+}
