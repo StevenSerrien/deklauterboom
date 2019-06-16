@@ -4,6 +4,7 @@
 {% set _class = spec.class or '' %}
 
 <div class="footer {{_class}}">
-  <p>Made with <span class="heart">❤</span> by Steven</p>
+  {# <p>Made with <span class="heart">❤</span> by Steven</p> #}
+  <p><span class="heart">💪</span> Website onder constructie  </p>
 </div>
 {% endmacro %}

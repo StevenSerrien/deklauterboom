@@ -29,6 +29,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-height: 100vh;
   }
   .header {
 
@@ -94,6 +95,7 @@
       @include heading-1;
       text-align: center;
       margin-top: 15px;
+      position: relative;
     }
     &__title {
       text-align: center;

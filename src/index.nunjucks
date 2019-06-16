@@ -21,7 +21,7 @@
         <div class="intro-box__contact-text">
           <h3 class="intro-box__contact-title"><span class="highlight">Waar</span> kan u ons vinden?</h3>
           <p>De Klauterboom</p>
-          <p>Prins Boudewijnlaan 82, bus 1</p>
+          <p>Prins Boudewijnlaan 82 bus 1</p>
           <p>2610 Wilrijk</p>
 
           <a href="mailto:info@deklauterboom.be">info@deklauterboom.be</a>
@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="intro-box__contact-cta">
-          <a class="button" href="mailto:info@deklauterboom.be">stuur ons een mailtje</a>
+          <a class="button" href="mailto:info@deklauterboom.be">stuur ons een e-mail</a>
         </div>
        </div>
 
