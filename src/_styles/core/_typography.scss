@@ -1,0 +1,45 @@
+
+/**
+ *
+ * All styles related to typography
+ *
+ */
+
+@mixin display-1 {
+  font-family: $font-family-display;
+  font-size: 3.4375rem;
+  line-height: 4.5625rem;
+  font-weight: 500;
+}
+
+@mixin heading-1 {
+
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+@mixin body {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+@mixin body-emphasis {
+
+}
+
+
+.highlight {
+  color: $brand-01;
+}
+
+h1 {
+  @include heading-1;
+}
+
+.display-1 {
+  @include display-1;
+}
+
+
+
+

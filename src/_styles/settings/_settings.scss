@@ -1,9 +1,6 @@
-@import 'foundation-overrides';
-
-
-
-
 $ocean-blue: #2A5DF8;
+$ocean-blue: rgb(68, 115, 255);
+$ocean-blue: rgb(75, 119, 253);
 
 
 
@@ -17,6 +14,9 @@ $brand-01-dark: $ocean-blue;
 $brand-01-darkest: $ocean-blue;
 
 
+$neutral: #F0F0F0;
+$neutral-darker: #727272;
+
 
 
 
@@ -24,3 +24,7 @@ $border-radius: 5px;
 
 
 $box-shadow-level-01: 0px 4px 50px rgba(0, 0, 0, 0.1);
+
+
+$font-family-display: 'futura-pt', sans-serif;
+$font-family-global: 'gill-sans-nova', sans-serif;
