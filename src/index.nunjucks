@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="cover">
-  <img src="images/jos-2.svg" class="bg"/>
+  <img src="images/wave.svg" class="bg"/>
   <div class="container grid-container">
     {{header.content({})}}
 
