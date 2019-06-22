@@ -3,8 +3,10 @@
 @import 'reset';
 
 @import 'settings/settings';
-@import 'core/typography';
 @import 'settings/foundation-overrides';
+@import 'core/typography';
+@import 'settings/global';
+
 
 
 
@@ -65,6 +67,10 @@
     position: relative;
     max-width: 80%;
 
+    @include breakpoint(medium down) {
+
+    }
+
     .letters {
       position: absolute;
       right: -(548px / 3);
@@ -74,6 +80,7 @@
 
 
     &__contact {
+      position: relative;
       margin-top: auto;
       display: flex;
 
@@ -165,6 +172,30 @@
 
     &__subtitle {
 
+    }
+
+
+    @include breakpoint(large down) {
+      padding: 3.125rem 3.75rem 50px;
+    }
+
+    @include breakpoint(medium down) {
+      max-width: 90%;
+    }
+    @include breakpoint(small down) {
+      max-width: 100%;
+      padding: 1.5625rem;
+      #{$introbox} {
+        &__contact {
+          margin-top: 3.125rem;
+          flex-direction: column;
+        }
+
+        &__contact-cta {
+
+          margin: 4rem auto 0;
+        }
+      }
     }
   }
 

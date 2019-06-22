@@ -10,12 +10,21 @@
   font-size: 3.4375rem;
   line-height: 4.5625rem;
   font-weight: 500;
+
+  @include breakpoint(small down) {
+    font-size: 2.375rem;
+  }
 }
+
+
 
 @mixin heading-1 {
 
   font-size: 1.5rem;
   line-height: 1.75rem;
+  @include breakpoint(small down) {
+    font-size: calc(1.5rem/1.2);
+  }
 }
 
 @mixin body {
