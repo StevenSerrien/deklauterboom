@@ -1,9 +1,39 @@
 {% macro content(spec) %}
 
-{% set spec = spec or {} %}
-{% set _class = spec.class or '' %}
+<script type="application/ld+json">
+ {
+ "@id" => 'https://deklauterboom.be#organization'
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "De Klauterboom",
+ "url": "https://www.deklauterboom.be",
+ "logo": "https://raw.githubusercontent.com/StevenSerrien/deklauterboom/master/src/_images/2x/full-coloured%402x.png",
+ "foundingDate": "2019",
+ "founders": [
+ {
+ "@type": "Person",
+ "name": "Sofie Declau"
+ },
+ {
+ "@type": "Person",
+ "name": "Silke Auwers"
+ } ],
+ "address": {
+ "@type": "PostalAddress",
+ "streetAddress": "Prins Boudewijnlaan 82 bus 3",
+ "addressLocality": "Wilrijk",
+ "addressRegion": "Antwerpen",
+ "postalCode": "2610",
+ "addressCountry": "BE"
+ },
+ "contactPoint": {
+ "@type": "ContactPoint",
+ "contactType": "Info",
+ "telephone": "(+32)494 93 63 36",
+ "email": "info@deklauterboom.be"
+ }
+ }
+</script>
 
-<div class="{{_class}}">
-  <p>This is an example paragraph for the schema module</p>
-</div>
+
 {% endmacro %}

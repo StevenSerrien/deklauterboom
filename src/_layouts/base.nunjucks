@@ -5,6 +5,8 @@
   {% set baseUrl = config.baseUrl or './' %}
 {% endblock %}
 
+{% import "_modules/schema/schema.nunjucks" as schema %}
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 
@@ -14,6 +16,7 @@
     <title>Logopedie te Wilrijk - De Klauterboom</title>
     <meta name="description" content="Logopediepraktijk te Wilrijk - De Klauterboom biedt ondersteuning bij taal- en spraakontwikkeling, leerproblemen (lezen, schrijven en rekenen) en afwijkende mondgewoonten."/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {{schema.content({})}}
     <link rel="stylesheet" href="{{baseUrl}}styles/main.css"/>
     <link rel="stylesheet" href="https://use.typekit.net/cup8hyj.css">
     <link rel="canonical" href="https://www.deklauterboom.be/">
