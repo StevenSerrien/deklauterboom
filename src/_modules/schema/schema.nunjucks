@@ -19,7 +19,7 @@
  } ],
  "address": {
  "@type": "PostalAddress",
- "streetAddress": "Prins Boudewijnlaan 82 bus 3",
+ "streetAddress": "Prins Boudewijnlaan 82 bus 1",
  "addressLocality": "Wilrijk",
  "addressRegion": "Antwerpen",
  "postalCode": "2610",
