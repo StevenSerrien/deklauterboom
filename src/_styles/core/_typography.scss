@@ -30,6 +30,12 @@
 @mixin body {
   font-size: 1rem;
   line-height: 1.3rem;
+  font-weight: inherit;
+}
+
+@mixin button-type {
+  @include body;
+  font-family: $font-family-display;
 }
 
 @mixin body-emphasis {

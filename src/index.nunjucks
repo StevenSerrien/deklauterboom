@@ -5,10 +5,12 @@
 {% import "_modules/footer/footer.nunjucks" as footer %}
 
 {% block content %}
-<div class="cover">
+ {{header.content({navItems: site.data.nav})}}
+
+{# <div class="cover">
   <img src="images/wave.svg" class="bg"/>
   <div class="container grid-container">
-    {{header.content({})}}
+
 
     <div class="content">
       <div class="intro-box">
@@ -50,5 +52,5 @@
     {{footer.content({})}}
 
   </div>
-  </div>
+  </div> #}
 {% endblock %}

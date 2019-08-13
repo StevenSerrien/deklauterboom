@@ -12,7 +12,7 @@ html {
 
 // Default body styles
 body {
-  background-color: red;
+  @include body;
   margin: 0;
   padding: 0;
 
@@ -23,7 +23,7 @@ body {
   line-height: $global-lineheight;
   color: $body-font-color;
 
-  @include body;
+
 
 
   -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes

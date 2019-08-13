@@ -2,17 +2,39 @@
 $component: '.header';
 
 $header-spacer-top: 3.1875rem;
+$header-height: 7.5rem;
+$header-logo-height: 3.25rem;
 
 #{$component} {
-    height: 50px;
+    height: $header-height;
     display: flex;
     position: relative;
-    margin-top: $header-spacer-top;
+    align-items: center;
+    @include xy-grid-container();
+
     &__logo {
-        height: 100%;
+        height: $header-logo-height;
         img {
             height: inherit;
             width: auto;
         }
+    }
+
+    &__nav {
+      margin-left: auto;
+      ul {
+        display: flex;
+        height: 100%;
+         li {
+           & + li {
+              margin-left: 15px;
+           }
+          a {
+            text-transform: lowercase;
+            @include button-type;
+            padding: 11px 15px;
+          }
+         }
+      }
     }
 }

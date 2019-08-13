@@ -23,8 +23,17 @@ const defaultNotification = function(err) {
 let config = Object.assign({}, pjson.config, defaultNotification);
 
 let args = minimist(process.argv.slice(2));
+
+let defaultLang = 'nl'
 let dirs = config.directories;
 let taskTarget = args.production ? dirs.destination : dirs.temporary;
+
+if (args.lang) {
+  dirs.data = dirs.data + '/' + args.lang;
+} else {
+  dirs.data = dirs.data + '/' + defaultLang;
+}
+
 
 // Create a new browserSync instance
 let browserSync = browserSyncLib.create();
