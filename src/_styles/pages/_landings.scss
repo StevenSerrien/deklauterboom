@@ -3,10 +3,19 @@
   @include xy-grid-container();
 
   .intro {
-    @include xy-cell(30%, false);
+    width: xy-cell-size(50%);
+    padding: 54px 63px 77px;
+    background-color: $brand-01;
+    @include headings {
+      & + p {
+        margin-top: $spacer * 4;
+      }
+    }
+
+
   }
   .illustration {
-    @include xy-cell(80%, false);
+    width: xy-cell-size(100%);
   }
 
   .intro, .illustration {
@@ -17,6 +26,7 @@
   .section {
     @include xy-grid(horizontal, false);
     width: 100%;
+    align-items: center;
   }
 
 

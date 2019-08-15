@@ -1,15 +1,3 @@
-html {
-  box-sizing: border-box;
-  font-size: $global-font-size;
-}
-
-// Set box-sizing globally to handle padding and border widths
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 // Default body styles
 body {
   @include body;
@@ -17,7 +5,7 @@ body {
   padding: 0;
 
   background: $body-background;
-
+  font-size: $global-font-size;
   font-family: $body-font-family;
   font-weight: $global-weight-normal;
   line-height: $global-lineheight;

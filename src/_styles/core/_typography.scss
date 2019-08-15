@@ -7,17 +7,17 @@
 
 /** Futura PT **/
 $default-type-weights:
-                    (light 300),
-                    (book 400),
-                    (medium 500),
-                    (semi-bold 600),
+                    (light 300)
+                    (book 400)
+                    (medium 500)
+                    (semi-bold 600)
                     (bold 700);
 
 /** Gill Sans Nova **/
-$only-secondary-type-weights: (ultra-light 200);
+$only-secondary-type-weights: ultra-light 200;
 
 /** Merged Typeface Weights **/
-$all-type-weights: join($only-secondary-type-weights, $default-type-weights, comma);
+$all-type-weights: append($default-type-weights, $only-secondary-type-weights, space);
 
 @mixin font-weight($weight-name) {
   font-weight: find-value($all-type-weights, $weight-name);
@@ -75,6 +75,19 @@ h1 {
 .display-1 {
   @include display-1;
 }
+
+/** Weight Modifiers **/
+
+@each $weight in $all-type-weights {
+    $class-name: nth($weight, 1);
+    $font-weight: nth($weight, 2);
+
+      .#{$class-name} {
+        font-weight: $font-weight;
+      }
+}
+
+
 
 
 

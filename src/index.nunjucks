@@ -10,7 +10,11 @@
 
 <section id="landing">
   <div class="section">
-    <div class="intro"></div>
+    <div class="intro">
+      <h1 class="display-1">Op zoek naar een <span class="medium">logopediste?</span></h1>
+      <p>Welkom bij logopediepraktijk De Klauterboom, gevestigd te Wilrijk. <br/>
+                  Onze praktijk is gespecialiseerd  in verscheidene velden.</p>
+    </div>
     <div class="illustration"></div>
   </div>
 
