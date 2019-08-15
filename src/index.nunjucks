@@ -7,6 +7,53 @@
 {% block content %}
  {{header.content({navItems: site.data.nav})}}
 
+
+<section id="landing">
+  <div class="section">
+    <div class="intro"></div>
+    <div class="illustration"></div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {# <div class="cover">
   <img src="images/wave.svg" class="bg"/>
   <div class="container grid-container">

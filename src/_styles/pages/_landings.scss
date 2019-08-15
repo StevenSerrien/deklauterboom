@@ -1,0 +1,26 @@
+#landing {
+  display: flex;
+  @include xy-grid-container();
+
+  .intro {
+    @include xy-cell(30%, false);
+  }
+  .illustration {
+    @include xy-cell(80%, false);
+  }
+
+  .intro, .illustration {
+    flex-shrink: 0;
+  }
+
+
+  .section {
+    @include xy-grid(horizontal, false);
+    width: 100%;
+  }
+
+
+  @include breakpoint(medium) {
+    min-height: 80vh;
+  }
+}
