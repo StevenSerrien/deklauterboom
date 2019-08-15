@@ -10,6 +10,9 @@
 
 <section id="landing">
   <div class="section">
+    <div class="illustration" style="background-image: url(images/landing-illustration.png)">
+      {# <img src="" alt="book now"> #}
+    </div>
     <div class="intro">
       <h1 class="display-1">Op zoek naar een <span class="medium">logopediste?</span></h1>
       <p>Welkom bij logopediepraktijk De Klauterboom, gevestigd te Wilrijk. <br/>
@@ -17,7 +20,6 @@
 
       {{link.content({type: 'button', class:'cta', text: 'maak een afspraak'})}}
     </div>
-    <div class="illustration"></div>
   </div>
 
 </section>

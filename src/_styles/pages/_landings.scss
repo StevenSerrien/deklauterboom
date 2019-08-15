@@ -1,9 +1,15 @@
+$width-intro: 50%;
+
+$width-illustration-buffer: 20%;
+$width-illustration: $width-intro + $width-illustration-buffer;
+
+
 #landing {
   display: flex;
   @include xy-grid-container();
 
   .intro {
-    width: xy-cell-size(50%);
+    width: xy-cell-size($width-intro);
     padding: 54px 63px 77px;
     background-color: $brand-01;
     @include headings {
@@ -19,11 +25,25 @@
 
   }
   .illustration {
-    width: xy-cell-size(100%);
+    height: 100%;
+    position: relative;
+    // background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: xy-cell-size($width-illustration);
+    img {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
   }
 
   .intro, .illustration {
     flex-shrink: 0;
+    position: relative;
   }
 
 
@@ -33,8 +53,24 @@
     align-items: center;
   }
 
+  @include breakpoint(small down) {
+
+  }
+
 
   @include breakpoint(medium) {
     min-height: 80vh;
+
+    .intro {
+      order: 1;
+    }
+
+    .illustration {
+      order: 2;
+    }
+
+    .illustration {
+      margin-left: -$width-illustration-buffer;
+    }
   }
 }
