@@ -14,6 +14,8 @@
       <h1 class="display-1">Op zoek naar een <span class="medium">logopediste?</span></h1>
       <p>Welkom bij logopediepraktijk De Klauterboom, gevestigd te Wilrijk. <br/>
                   Onze praktijk is gespecialiseerd  in verscheidene velden.</p>
+
+      {{link.content({type: 'button', class:'cta', text: 'maak een afspraak'})}}
     </div>
     <div class="illustration"></div>
   </div>
