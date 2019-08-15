@@ -5,11 +5,29 @@
  *
  */
 
+/** Futura PT **/
+$default-type-weights:
+                    (light 300),
+                    (book 400),
+                    (medium 500),
+                    (semi-bold 600),
+                    (bold 700);
+
+/** Gill Sans Nova **/
+$only-secondary-type-weights: (ultra-light 200);
+
+/** Merged Typeface Weights **/
+$all-type-weights: join($only-secondary-type-weights, $default-type-weights, comma);
+
+@mixin font-weight($weight-name) {
+  font-weight: find-value($all-type-weights, $weight-name);
+}
+
 @mixin display-1 {
   font-family: $font-family-display;
   font-size: 3.4375rem;
   line-height: 4.5625rem;
-  font-weight: 500;
+  @include font-weight(book);
 
   @include breakpoint(small down) {
     font-size: 2.375rem;
@@ -19,12 +37,15 @@
 
 
 @mixin heading-1 {
-
   font-size: 1.5rem;
   line-height: 1.75rem;
   @include breakpoint(small down) {
     font-size: calc(1.5rem/1.2);
   }
+}
+
+@mixin heading-2($weight: null) {
+
 }
 
 @mixin body {
@@ -53,6 +74,12 @@ h1 {
 
 .display-1 {
   @include display-1;
+}
+
+
+
+@mixin weight($weight) {
+
 }
 
 

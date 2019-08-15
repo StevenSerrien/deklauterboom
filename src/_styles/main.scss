@@ -4,6 +4,7 @@
 
 @import 'settings/settings';
 @import 'settings/foundation-overrides';
+@import 'mixins/mixins';
 @import 'core/typography';
 @import 'settings/global';
 
@@ -15,5 +16,9 @@
 @import '../_modules/header/header';
 @import '../_modules/footer/footer';
 
+
+
+// Import pages (sections)
+@import './pages/landings';
 
 

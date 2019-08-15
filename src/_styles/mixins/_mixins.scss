@@ -8,3 +8,31 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/**
+ * in_list — Checks if a value exists in a list
+ *
+ * @param  $value the needle
+ * @param  $list  the haystack
+ * @return boolen TRUE if $value is found in the $list, FALSE otherwise.
+ */
+ @function in_list($value, $list) {
+  $inList: index($list, $value) != null;
+  @return $inList;
+}
+
+@function find-value($list, $key) {
+  @each $item in $list {
+      @if ($key == nth($item, 1)) {
+          @return nth($item, 2);
+      }
+  }
+  @error "Sorry, but `#{$key}` is not a valid weight option.";
+  @return false;
+}
+
+
+// white-space: normal;
+//     overflow-wrap: break-word;
+//     word-wrap: break-word;
+//     hyphens: auto;

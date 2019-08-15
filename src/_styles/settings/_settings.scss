@@ -1,17 +1,9 @@
-$ocean-blue: #2A5DF8;
-$ocean-blue: rgb(68, 115, 255);
-$ocean-blue: rgb(75, 119, 253);
+$brand-01: #E5F2F3;
+$brand-02: #FAF2E8;
 
 
-
-
-
-
-$brand-01-lightest: $ocean-blue;
-$brand-01-light: $ocean-blue;
-$brand-01: $ocean-blue;
-$brand-01-dark: $ocean-blue;
-$brand-01-darkest: $ocean-blue;
+$neutral: #F8FAFB;
+$dark: #16171E;
 
 
 $neutral: #F0F0F0;
@@ -28,3 +20,4 @@ $box-shadow-level-01: 0px 4px 50px rgba(0, 0, 0, 0.1);
 
 $font-family-display: 'futura-pt', sans-serif;
 $font-family-global: 'gill-sans-nova', sans-serif;
+$font-base-color: $dark;

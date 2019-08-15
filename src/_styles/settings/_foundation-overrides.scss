@@ -21,7 +21,7 @@ $block-grid-max: 8;
 
 $body-font-family: $font-family-global;
 $global-weight-normal: 500;
-$body-font-color: #000000;
+$body-font-color: $font-base-color;
 
 @import 'node_modules/foundation-sites/scss/global';
 @import 'node_modules/foundation-sites/scss/xy-grid/xy-grid';
@@ -35,5 +35,10 @@ $body-font-color: #000000;
   $offset: false,
   $vertical-grid: false,
   $frame-grid: false);
+
+
+
+
+
 
 
