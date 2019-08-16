@@ -22,12 +22,18 @@
 
 // Import pages (sections)
 @import './pages/landings';
+@import './pages/features';
 
 
 
 
 section {
   display: flex;
+  flex-direction: column;
   @include xy-grid-container();
   margin-bottom: 8.75rem;
+
+  .section-title {
+    margin-bottom: $spacer * 10;
+  }
 }
