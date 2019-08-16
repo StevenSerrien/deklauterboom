@@ -1,17 +1,14 @@
 $width-intro: 50%;
 
-$width-illustration-buffer: 20%;
+$width-illustration-buffer: 14%;
 $width-illustration: $width-intro + $width-illustration-buffer;
 
 
 #landing {
-  display: flex;
-  @include xy-grid-container();
-
   .intro {
     width: xy-cell-size($width-intro);
     padding: 54px 63px 77px;
-    background-color: $brand-01;
+    background-color: $brand-02;
     @include headings {
       & + p {
         margin-top: $spacer * 4;
@@ -25,7 +22,7 @@ $width-illustration: $width-intro + $width-illustration-buffer;
 
   }
   .illustration {
-    height: 100%;
+    height: 90%;
     position: relative;
     // background-color: red;
     background-size: cover;

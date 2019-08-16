@@ -1,0 +1,30 @@
+// section-title styles
+$component: '.section-title';
+
+$height-bar: 10px;
+
+#{$component} {
+  @include heading-1;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: $height-bar;
+    width: 40%;
+    bottom: $height-bar / 1.5;
+    left: 0;
+
+    z-index: -1;
+  }
+
+  &--primary::after {
+    background-color: $brand-01;
+  }
+
+  &--secondary::after {
+    background-color: $brand-02;
+  }
+}

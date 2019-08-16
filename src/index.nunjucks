@@ -3,6 +3,7 @@
 {% import "_modules/link/link.nunjucks" as link %}
 {% import "_modules/header/header.nunjucks" as header %}
 {% import "_modules/footer/footer.nunjucks" as footer %}
+{% import "_modules/atoms/section-title/section-title.nunjucks" as section_title %}
 
 {% block content %}
  {{header.content({navItems: site.data.nav})}}
@@ -21,6 +22,12 @@
       {{link.content({type: 'button', class:'cta', text: 'maak een afspraak'})}}
     </div>
   </div>
+
+</section>
+
+
+<section id="features">
+  {{section_title.content({text: 'Wat behandelen wij'})}}
 
 </section>
 

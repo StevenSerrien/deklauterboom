@@ -37,8 +37,9 @@ $all-type-weights: append($default-type-weights, $only-secondary-type-weights, s
 
 
 @mixin heading-1 {
-  font-size: 1.5rem;
-  line-height: 1.75rem;
+  font-family: $font-family-display;
+  font-size: 2.25rem;
+  line-height: normal;
   @include breakpoint(small down) {
     font-size: calc(1.5rem/1.2);
   }

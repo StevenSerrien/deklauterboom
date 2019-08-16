@@ -13,8 +13,10 @@
 
 // Import Modules
 @import '../_modules/link/link';
+@import '../_modules/atoms/section-title/section-title';
 @import '../_modules/header/header';
 @import '../_modules/footer/footer';
+
 
 
 
@@ -22,3 +24,10 @@
 @import './pages/landings';
 
 
+
+
+section {
+  display: flex;
+  @include xy-grid-container();
+  margin-bottom: 8.75rem;
+}
