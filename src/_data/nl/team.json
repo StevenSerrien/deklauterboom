@@ -1,0 +1,17 @@
+{
+  "title": "Het team",
+  "persons": [
+    {
+      "name": "Sofie Declau",
+      "function": "logopediste",
+      "photo_url_lowres": "images/team/sofie-lqip.jpg",
+      "photo_url": "images/team/sofie.jpg"
+    },
+    {
+      "name": "Silke Auwers",
+      "function": "logopediste",
+      "photo_url_lowres": "images/team/silke-lqip.jpg",
+      "photo_url": "images/team/silke.jpg"
+    }
+  ]
+}

@@ -17,9 +17,9 @@ const flatMap = require('flat-map').default
 // const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 const twoVariantsPerFile = (file, cb) => {
 	const pngFile = file.clone()
-	pngFile.scale = {maxWidth: 300, format: 'png'}
+	pngFile.scale = {maxWidth: 200, format: 'png'}
 	const jpegFile = file.clone()
-	jpegFile.scale = {maxWidth: 300,  format: 'jpeg'}
+	jpegFile.scale = {maxWidth: 200,  format: 'jpeg'}
 	cb(null, [pngFile, jpegFile])
 }
 
@@ -51,7 +51,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
       .pipe(scaleImages(computeFileName))
       .pipe(imagemin(
         [
-          imageminMozjpeg({quality: 5})
+          imageminMozjpeg({quality: 20})
           // pngquant({quality: [10, 10]}),
           // mozjpeg({quality: 50})
           // pngquant({quality: 1, speed: 1}),

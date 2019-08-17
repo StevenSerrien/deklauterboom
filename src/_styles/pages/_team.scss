@@ -1,0 +1,35 @@
+$card-gutters: (
+  small: 10px,
+  medium: 40px,
+);
+
+
+#team {
+  .team {
+    @include xy-grid;
+    @include xy-gutters($gutters: $card-gutters, $gutter-type: margin, $negative: true);
+
+    .cell {
+      @include xy-cell(100%, $gutter-output: true, $gutters: $card-gutters, $breakpoint: small);
+    }
+  }
+
+  @include breakpoint(medium) {
+    .team {
+      margin-top: $spacer * 5;
+      align-items: flex-start;
+      padding-bottom: $spacer * 10;
+      .cell {
+        width: 100%;
+        @include xy-cell(1/2, $gutter-output: true, $gutters: $card-gutters);
+        display: flex;
+        justify-content: center;
+
+
+        &:nth-child(even) {
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+}

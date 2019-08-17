@@ -1,0 +1,22 @@
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _class = spec.class or '' %}
+{% set _name = spec.name or '' %}
+{% set _title = spec.title or '' %}
+{% set _image_lowres = spec.image_lowres or '' %}
+{% set _image = spec.image or '' %}
+{% set _number = spec.number or '' %}
+
+
+<div class="person {{_class}} person--{{_number}}">
+  <div class="person__img">
+        <img src="{{_image}}" alt="Photo {{_name}}">
+
+        <div class="person__info">
+          <span class="person__info-name">{{ _name }}</span>
+          <span class="person__info-title">{{ _title }}</span>
+        </div>
+      </div>
+</div>
+{% endmacro %}

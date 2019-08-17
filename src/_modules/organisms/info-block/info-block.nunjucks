@@ -2,19 +2,23 @@
 
 {% set spec = spec or {} %}
 {% set _class = spec.class or '' %}
+{% set _title = spec.title or '' %}
+{% set _text = spec.text or '' %}
+{% set _icon_path = spec.icon_path or '' %}
+
 
 <div class="info-block {{_class}}">
   <div class="info-block__illustration">
   <div class="info-block__icon">
-    <svg class="inline-svg" src="images/handdrawn-icons/handdrawn-piggy.svg"></svg>
+    <svg class="inline-svg" src="{{ _icon_path }}"></svg>
   </div>
 
   </div>
   <div class="info-block__content">
-    <h3 class="info-block__title">Wij zijn geconventioneerd</h3>
-    <p>Dit betekent dat onze tarieven bepaald worden door het Rijksinstituut voor Ziekte- en Invaliditeitsverzekering (RIZIV).
-De terugbetaling is steeds afhankelijk van de aard en ernst van het probleem.  In sommige situaties worden de behandelingen terugbetaald via de aanvullende verzekering. Dan gelden er dus andere terugbetalingstarieven. De tegemoetkoming die u hierbij ontvangt is afhankelijk van uw ziekenfonds. Meer informatie kan u opvragen bij uw mutualiteit.
-</p>
+    <h3 class="info-block__title">{{ _title }}</h3>
+    <p>
+      {{ _text }}
+    </p>
   </div>
 </div>
 {% endmacro %}
