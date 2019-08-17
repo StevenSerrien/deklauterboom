@@ -18,6 +18,7 @@
 
 @import '../_modules/atoms/section-title/section-title';
 @import '../_modules/organisms/feature-card/feature-card';
+@import '../_modules/organisms/step/step';
 
 
 
@@ -25,6 +26,7 @@
 // Import pages (sections)
 @import './pages/landings';
 @import './pages/features';
+@import './pages/steps';
 
 
 

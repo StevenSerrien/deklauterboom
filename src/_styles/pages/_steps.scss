@@ -1,0 +1,54 @@
+// // Helper Mixin for the containers
+// @function template-areas($areas) {
+//   $grid-template-value: null;
+//   @for $i from 1 through length($areas) {
+//     $area: nth($areas, $i);
+
+//     $dashboard-row-height: 312px !default;
+//     $dashboard-row-small-height: 110px !default;
+
+//     // Append the given area
+//     $grid-template-value: append($grid-template-value, quote(nth($area, 1)), space);
+
+//     // If a value for the row height is set, apply that
+//     @if (length($area) == 2) {
+//       $grid-template-value: append($grid-template-value, nth($area, 2), space);
+//     }
+//     // If no value given, use default values */
+//     @else {
+//       $row-height-to-apply: if($i == 2, $dashboard-row-small-height, $dashboard-row-height);
+//       $grid-template-value: append($grid-template-value, $row-height-to-apply, space);
+//     }
+//   }
+
+//   // Adding two columns
+//   $grid-template-value: append($grid-template-value, unquote('/ 1fr 1fr'), space);
+
+//   @return $grid-template-value;
+// }
+
+$steps-gutters: (
+  small: 10px,
+  medium: 40px,
+);
+
+
+#steps {
+  .steps {
+    display: flex;
+    @include xy-grid;
+    @include xy-gutters($gutters: $card-gutters, $gutter-type: margin, $negative: true);
+
+    .cell {
+      @include xy-cell(1/2, $gutter-output: true, $gutters: $card-gutters);
+    }
+  }
+
+  @include breakpoint(medium) {
+    .steps {
+      .cell {
+        @include xy-cell(1/2, $gutter-output: true, $gutters: $card-gutters);
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+// step styles
+
+
+$component: '.step';
+
+
+$badge-dimension: 75px;
+$badge-buffer: 60px;
+
+$badge-wrapper-dimension: $badge-dimension + $badge-buffer;
+$stroke-width: 10px;
+
+#{$component} {
+  position: relative;
+  padding-left: ($badge-wrapper-dimension / 2) - $stroke-width;
+  padding-top: ($badge-wrapper-dimension / 2) - $stroke-width;
+
+  &__badge-wrapper {
+    width: $badge-dimension + $badge-buffer;
+    height: $badge-dimension + $badge-buffer;;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__badge {
+    width: $badge-dimension;
+    height: $badge-dimension;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background: $brand-02;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &__inner {
+    border: $stroke-width solid #F7F7F7;
+    min-height: 500px;
+  }
+
+  &__number {
+    @include heading-1;
+    @include font-weight(semi-bold);
+    line-height: $badge-dimension;
+  }
+}

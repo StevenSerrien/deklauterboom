@@ -2,7 +2,7 @@
 
 {% set spec = spec or {} %}
 {% set _text = spec.text or 'Default Section Title' %}
-{% set _bar_color = spec._bar_color or 'primary' %}
+{% set _bar_color = spec.bar_color or 'primary' %}
 
 
 <h2 class="section-title section-title--{{_bar_color}}">

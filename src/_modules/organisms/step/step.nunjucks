@@ -1,0 +1,14 @@
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _class = spec.class or '' %}
+
+<div class="step {{_class}}">
+  <div class="step__badge-wrapper">
+    <div class="step__badge">
+      <span class="step__number">1</span>
+    </div>
+  </div>
+  <div class="step__inner"></div>
+</div>
+{% endmacro %}

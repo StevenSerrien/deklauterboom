@@ -3,8 +3,11 @@
 {% import "_modules/link/link.nunjucks" as link %}
 {% import "_modules/header/header.nunjucks" as header %}
 {% import "_modules/footer/footer.nunjucks" as footer %}
-{% import "_modules/organisms/feature-card/feature-card.nunjucks" as feature_card %}
 {% import "_modules/atoms/section-title/section-title.nunjucks" as section_title %}
+
+{% import "_modules/organisms/feature-card/feature-card.nunjucks" as feature_card %}
+{% import "_modules/organisms/step/step.nunjucks" as step %}
+
 
 {% block content %}
  {{header.content({navItems: site.data.nav})}}
@@ -35,6 +38,19 @@
       {{feature_card.content({ type: feature.type, title: feature.title, text: feature.text, icon_path: feature.icon_path, special: true if loop.first, class: 'cell' })}}
     {% endfor %}
   </div>
+  </div>
+</section>
+
+<section id="steps">
+  {{section_title.content({bar_color: 'secondary', text: 'Hoe start je bij ons?'})}}
+  <div class="section">
+    <div class="steps">
+      <div class="cell">
+         {{step.content()}}
+      </div>
+      <div class="cell">
+      </div>
+    </div>
   </div>
 </section>
 
