@@ -28,16 +28,6 @@
       {% endfor %}
 
     {% endif %}
-
-    {# <div class="step__text-block">
-      <span class="step__subtitle">Allereerst</span>
-      <p class="step__text">U kan zich bij ons aanmelden na doorverwijzing (school, zorgcoördinator, CLB, arts, …) of op eigen initiatief. Aanmeldingen gebeuren telefonisch of per e-mail.</p>
-    </div>
-
-    <div class="step__text-block">
-      <span class="step__subtitle">Na aanmelding</span>
-      <p class="step__text">Dan plannen we een intakegesprek in. Tijdens dit gesprek zullen vragen gesteld worden over de voorgeschiedenis van uw kind. Wij proberen dan de hulpvraag in kaart te brengen. Verder zal er informatie gegeven worden over de tarieven en terugbetaling.</p>
-    </div> #}
   </div>
 </div>
 {% endmacro %}

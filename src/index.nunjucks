@@ -45,13 +45,9 @@
   {{section_title.content({bar_color: 'secondary', text: 'Hoe start je bij ons?'})}}
   <div class="section">
     <div class="steps">
-      <div class="cell">
-         {% for stepdata in site.data.steps %}
-          {{ step.content({number: loop.index, title: stepdata.title, content: stepdata.text })}}
-         {% endfor %}
-      </div>
-      <div class="cell">
-      </div>
+      {% for stepdata in site.data.steps %}
+          {{ step.content({number: loop.index, title: stepdata.title, content: stepdata.text, class: 'cell step--' + loop.index })}}
+      {% endfor %}
     </div>
   </div>
 </section>
