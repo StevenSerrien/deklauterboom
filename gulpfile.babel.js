@@ -52,9 +52,8 @@ gulp.task('default', ['clean'], () => {
 });
 
 // Build production-ready code
-gulp.task('build', [
+gulp.task('gulp:build', [
   'copy',
-  'imagemin',
   'lqip',
   'nunjucks',
   'sass',
@@ -62,8 +61,7 @@ gulp.task('build', [
 ]);
 
 // Server tasks with watch
-gulp.task('serve', [
-  'imagemin',
+gulp.task('gulp:serve', [
   'lqip',
   'copy',
   'nunjucks',
@@ -72,6 +70,15 @@ gulp.task('serve', [
   'browserSync',
   'watch'
 ]);
+
+
+gulp.task('serve', ['imagemin'], () => {
+  return gulp.start('gulp:serve');
+});
+
+gulp.task('build', ['imagemin'], () => {
+  return gulp.start('gulp:build');
+});
 
 // Testing
 gulp.task('test', ['eslint']);

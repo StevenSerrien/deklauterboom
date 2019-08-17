@@ -32,6 +32,7 @@
   <div class="section">
   <div class="xy-grid">
     {% for feature in site.data.features %}
+      <svg class="inline-svg" src="images/handdrawn-icons/handdrawn-speech.svg"></svg>
 
       {{feature_card.content({ title: feature.title, text: feature.text, icon_path: feature.icon_path, class: 'cell' })}}
 

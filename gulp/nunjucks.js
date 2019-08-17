@@ -6,6 +6,8 @@ import foldero from 'foldero';
 import nunjucks from 'gulp-nunjucks-html';
 import yaml from 'js-yaml';
 
+const embedSvg = require('gulp-embed-svg');
+
 export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   let dirs = config.directories;
   let dest = path.join(taskTarget);
@@ -76,6 +78,13 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
       removeEmptyAttributes: true,
       removeRedundantAttributes: true
     }))
+    .pipe(embedSvg(
+      {
+        root: dest,
+        createSpritesheet: true,
+        selectors: '.inline-svg'
+      }
+    ))
     .pipe(gulp.dest(dest))
     .on('end', browserSync.reload);
   });
