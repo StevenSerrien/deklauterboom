@@ -49,6 +49,14 @@ $special-bar-stroke: 4px;
     }
   }
 
+  // &__bottom {
+  //   flex-grow: 1;
+  //   align-items: flex-end;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-end;
+  // }
+
   &--special {
     &::after, &::before {
       background-color: $dark;

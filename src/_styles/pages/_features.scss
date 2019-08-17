@@ -31,4 +31,11 @@ $card-gutters: (
       }
     }
   }
+
+  /** TEMP **/
+  @include breakpoint (1332px down) {
+    .feature-card__title {
+      min-height: $spacer * 9;
+    }
+  }
 }

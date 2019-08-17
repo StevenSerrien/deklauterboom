@@ -52,6 +52,15 @@
   </div>
 </section>
 
+<section id="pricing">
+  {{section_title.content({text: 'Onze tarieven'})}}
+  <div class="section">
+    <div class="pricing">
+
+    </div>
+  </div>
+</section>
+
 
 
 
