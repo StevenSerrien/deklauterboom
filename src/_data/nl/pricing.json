@@ -1,0 +1,66 @@
+{
+  "title": "Onze tarieven",
+  "table": {
+    "headers": [
+      {
+        "def": "col_1",
+        "title": "honorarium"
+      },
+      {
+        "def": "col_2",
+        "title": "terugbetaling"
+      },
+      {
+        "def": "col_3",
+        "title": "verhoogde terugbetaling"
+      }
+    ],
+    "rows": [
+      {
+        "type": {
+          "title": "Aanvangsbilan",
+          "sublabel": "30’ minuten"
+        },
+        "col_1": "32,20",
+        "col_2": "29,20",
+        "col_3": "24,70"
+      },
+      {
+        "type": {
+          "title": "Therapie op praktijk",
+          "sublabel": "30’ minuten"
+        },
+        "col_1": "23,60",
+        "col_2": "21,60",
+        "col_3": "18,10"
+      },
+      {
+        "type": {
+          "title": "Therapie op school",
+          "sublabel": "30’ minuten"
+        },
+        "col_1": "22,80",
+        "col_2": "20,80",
+        "col_3": "16,80"
+      },
+      {
+        "type": {
+          "title": "Therapie op praktijk",
+          "sublabel": "60’ minuten"
+        },
+        "col_1": "47,40",
+        "col_2": "42,90",
+        "col_3": "36,40"
+      },
+      {
+        "type": {
+          "title": "Evolutiebilan"
+        },
+        "col_1": "45,90",
+        "col_2": "34,90",
+        "col_3": "41,40"
+      }
+    ],
+    "currency": "€"
+  }
+}

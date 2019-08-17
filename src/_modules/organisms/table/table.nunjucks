@@ -1,0 +1,44 @@
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _class = spec.class or '' %}
+{% set _table_data = spec.table_data or '' %}
+{% set _currency = spec.table_data.currency or '' %}
+
+
+<div class="wrapper">
+  <div class="Rtable Rtable--5cols Rtable--collapse">
+    <div class="Rtable-row Rtable-row--head">
+      <div class="Rtable-cell type-cell column-heading"></div>
+      {% for header in _table_data.headers %}
+        <div class="Rtable-cell {{header.def}}-cell column-heading">
+          <span>{{ header.title }}</span>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% for row in _table_data.rows %}
+    <div class="Rtable-row body">
+      <div class="Rtable-cell type-cell">
+        <div class="Rtable-cell--content title-content">
+        {{ row.type.title }}
+        {% if row.type.sublabel %}
+        <span class="sub">{{ row.type.sublabel }}</span>
+        {% endif %}
+        </div>
+      </div>
+      {% for col in _table_data.headers %}
+        <div class="Rtable-cell {{col.def}}-cell">
+          <div class="Rtable-cell--heading">{{col.title}} </div>
+          <div class="Rtable-cell--content {{col.def}}-content">{{ _currency }}{{ row[col.def]}}</div>
+        </div>
+      {% endfor %}
+
+    </div>
+    {% endfor %}
+
+
+
+  </div>
+</div>
+{% endmacro %}

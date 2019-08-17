@@ -7,6 +7,7 @@
 
 {% import "_modules/organisms/feature-card/feature-card.nunjucks" as feature_card %}
 {% import "_modules/organisms/step/step.nunjucks" as step %}
+{% import "_modules/organisms/table/table.nunjucks" as table %}
 
 
 {% block content %}
@@ -53,10 +54,10 @@
 </section>
 
 <section id="pricing">
-  {{section_title.content({text: 'Onze tarieven'})}}
+  {{section_title.content({text: site.data.pricing.title })}}
   <div class="section">
     <div class="pricing">
-
+      {{ table.content({table_data: site.data.pricing.table })}}
     </div>
   </div>
 </section>
