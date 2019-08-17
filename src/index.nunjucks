@@ -46,7 +46,9 @@
   <div class="section">
     <div class="steps">
       <div class="cell">
-         {{step.content()}}
+         {% for stepdata in site.data.steps %}
+          {{ step.content({number: loop.index, title: stepdata.title, content: stepdata.text })}}
+         {% endfor %}
       </div>
       <div class="cell">
       </div>

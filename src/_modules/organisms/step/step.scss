@@ -80,7 +80,7 @@ $stroke-width: 10px;
   &__subtitle {
     display: inline-block;
     font-size: 1.1em;
-    @include font-weight(semi-bold);
+    @include font-weight(book);
     margin-bottom: $spacer * 2.5;
   }
 
