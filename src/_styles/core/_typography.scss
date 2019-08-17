@@ -44,8 +44,10 @@ $all-type-weights: append($default-type-weights, $only-secondary-type-weights, s
   }
 }
 
-@mixin heading-2($weight: null) {
-
+@mixin heading-2() {
+  font-family: $font-family-display;
+  font-size: 1.75rem;
+  line-height: normal;
 }
 
 @mixin heading-3 {

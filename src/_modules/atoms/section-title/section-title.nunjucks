@@ -2,10 +2,18 @@
 
 {% set spec = spec or {} %}
 {% set _text = spec.text or 'Default Section Title' %}
+{% set _subtext = spec.subtext or '' %}
 {% set _bar_color = spec.bar_color or 'primary' %}
 
-
-<h2 class="section-title section-title--{{_bar_color}}">
+<div class="section-title">
+<h2 class="section-title__main section-title__main--{{_bar_color}}">
   {{ _text }}
 </h2>
+{% if _subtext|length %}
+  <span class="section-title__sub">{{ _subtext }}</span>
+{% endif %}
+</div>
+
+
+
 {% endmacro %}

@@ -78,6 +78,13 @@
   </div>
 </section>
 
+<section id="contact">
+    {{section_title.content({bar_color: 'secondary', text: site.data.contact.title, subtext: site.data.contact.subtitle })}}
+  <div class="section">
+
+  </div>
+</section>
+
 
 
 
