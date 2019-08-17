@@ -10,6 +10,19 @@ $component: '.info-block';
   padding: 30px 100px 30px 71px;
   overflow: hidden;
   border-radius: 10px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    width: 20%;
+    content: '';
+    height: 200%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(35deg);
+    background: $brand-01;
+    z-index: -1;
+  }
 
 
   &__content {
