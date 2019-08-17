@@ -1,29 +1,34 @@
 
 $card-gutters: (
   small: 10px,
-  medium: 80px,
+  medium: 40px,
 );
 
 #features {
   .section {
     min-height: 50vh;
     background-color: $neutral;
-
+    padding: 6.25rem 3.125rem;
     // @include xy-grid-collapse;
     // @include xy-grid-collapse;
   }
 
-  .xy-grid {
+  .features {
     @include xy-grid;
     @include xy-gutters($gutters: $card-gutters, $gutter-type: margin, $negative: true);
-
   }
   .cell {
     // @include xy-cell(100%, $gutter-output: true, $gutters: map-get($card-gutters, small));
     @include xy-cell(100%, $gutter-output: true, $gutters: $card-gutters, $breakpoint: small);
+  }
 
-    @include breakpoint(medium up) {
-      @include xy-cell(1/3, $gutter-output: true, $gutters: $card-gutters);
+
+  @include breakpoint(medium) {
+    .features {
+      .cell {
+        min-height: 30.3125rem;
+        @include xy-cell(1/3, $gutter-output: true, $gutters: $card-gutters);
+      }
     }
   }
 }

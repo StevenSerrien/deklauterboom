@@ -30,12 +30,9 @@
 <section id="features">
   {{section_title.content({text: 'Wat behandelen wij'})}}
   <div class="section">
-  <div class="xy-grid">
+  <div class="features">
     {% for feature in site.data.features %}
-      <svg class="inline-svg" src="images/handdrawn-icons/handdrawn-speech.svg"></svg>
-
-      {{feature_card.content({ title: feature.title, text: feature.text, icon_path: feature.icon_path, class: 'cell' })}}
-
+      {{feature_card.content({ type: feature.type, title: feature.title, text: feature.text, icon_path: feature.icon_path, special: true if loop.first, class: 'cell' })}}
     {% endfor %}
   </div>
   </div>

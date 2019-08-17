@@ -1,1 +1,81 @@
 // feature-card styles
+
+$component: '.feature-card';
+
+$divider-height: $spacer;
+$special-bar-stroke: 4px;
+
+#{$component} {
+  background-color: white;
+  padding: 3.375rem 3rem 3rem;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+
+  &__icon {
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    justify-content: flex-end;
+    align-self: center;
+
+    & > svg {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    @include heading-3;
+    margin-top: $spacer;
+  }
+
+  &__divider {
+    height: $divider-height;
+    width: 25%;
+    align-self: center;
+    background: $brand-01-dark;
+    margin-top: $spacer * 2;
+    margin-bottom: $spacer * 4;
+  }
+
+  &__text {
+    color: $neutral-darkest;
+
+    em {
+      color: $neutral-dark;
+    }
+  }
+
+  &--special {
+    &::after, &::before {
+      background-color: $dark;
+      content: '';
+      position: absolute;
+    }
+
+    &:before {
+      width: $special-bar-stroke;
+      height: 30%;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+
+
+  /**
+   *
+   * TEMPORARY UNTIL ICONS ARE ALL CONVERTED
+   *
+   */
+
+  &#letters {
+    .feature-card__icon {
+      width: 30%;
+      align-self: center;
+    }
+  }
+}

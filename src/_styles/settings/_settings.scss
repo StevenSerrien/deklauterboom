@@ -1,4 +1,9 @@
+
 $brand-01: #E5F2F3;
+$brand-01-dark: #DFEAE3;
+
+
+
 $brand-02: #FAF2E8;
 
 
@@ -7,8 +12,9 @@ $dark: #16171E;
 
 
 // $neutral: #F0F0F0;
+$neutral-dark: #979797;
 $neutral-darker: #727272;
-
+$neutral-darkest: #4F545C;
 
 
 $spacer: 0.5rem;
@@ -21,3 +27,5 @@ $box-shadow-level-01: 0px 4px 50px rgba(0, 0, 0, 0.1);
 $font-family-display: 'futura-pt', sans-serif;
 $font-family-global: 'gill-sans-nova', sans-serif;
 $font-base-color: $dark;
+
+$font-dimmer-color: $neutral-darkest;

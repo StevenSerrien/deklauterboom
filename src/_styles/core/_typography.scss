@@ -35,7 +35,6 @@ $all-type-weights: append($default-type-weights, $only-secondary-type-weights, s
 }
 
 
-
 @mixin heading-1 {
   font-family: $font-family-display;
   font-size: 2.25rem;
@@ -48,6 +47,16 @@ $all-type-weights: append($default-type-weights, $only-secondary-type-weights, s
 @mixin heading-2($weight: null) {
 
 }
+
+@mixin heading-3 {
+  font-size: 1.5rem;
+  @include font-weight(book);
+}
+
+@include headings {
+  font-family: $font-family-display;
+}
+
 
 @mixin body {
   font-size: 1rem;
@@ -70,7 +79,7 @@ $all-type-weights: append($default-type-weights, $only-secondary-type-weights, s
   color: $brand-01;
 }
 
-h1 {
+h1, .h1 {
   @include heading-1;
 }
 
