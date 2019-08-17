@@ -1,0 +1,14 @@
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _class = spec.class or '' %}
+{% set _title = spec.title or '' %}
+{% set _text = spec.text or '' %}
+{% set _icon_path = spec.icon_path or '' %}
+
+<div class="feature-card {{_class}}">
+  {# <div class="feature-card__icon">{% include "images/handdrawn-icons/handdrawn-speech.svg" %}</div> #}
+  <h3>{{ _title }}</h3>
+  <p>This is an example paragraph for the feature-card module</p>
+</div>
+{% endmacro %}

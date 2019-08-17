@@ -2,6 +2,7 @@ $width-intro: 50%;
 
 $width-illustration-buffer: 14%;
 $width-illustration: $width-intro + $width-illustration-buffer;
+$illu-block-height: 4.75rem;
 
 
 #landing {
@@ -35,6 +36,19 @@ $width-illustration: $width-intro + $width-illustration-buffer;
       transform: translate(-50%, -50%);
       top: 50%;
       left: 50%;
+    }
+
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      height: $illu-block-height;
+      bottom: -$illu-block-height / 2;
+      right: -3.125rem;
+      width: 22.5rem;
+      background-color: $neutral;
+      z-index: -1;
     }
   }
 

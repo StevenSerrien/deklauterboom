@@ -3,6 +3,7 @@
 {% import "_modules/link/link.nunjucks" as link %}
 {% import "_modules/header/header.nunjucks" as header %}
 {% import "_modules/footer/footer.nunjucks" as footer %}
+{% import "_modules/organisms/feature-card/feature-card.nunjucks" as feature_card %}
 {% import "_modules/atoms/section-title/section-title.nunjucks" as section_title %}
 
 {% block content %}
@@ -13,7 +14,6 @@
   <div class="section">
     <div class="cover">
       <div class="illustration" style="background-image: url(images/landing-illustration.png)">
-        {# <img src="" alt="book now"> #}
       </div>
       <div class="intro">
         <h1 class="display-1">Op zoek naar een <span class="medium">logopediste?</span></h1>
@@ -31,9 +31,11 @@
   {{section_title.content({text: 'Wat behandelen wij'})}}
   <div class="section">
   <div class="xy-grid">
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    {% for feature in site.data.features %}
+
+      {{feature_card.content({ title: feature.title, text: feature.text, icon_path: feature.icon_path, class: 'cell' })}}
+
+    {% endfor %}
   </div>
   </div>
 </section>
