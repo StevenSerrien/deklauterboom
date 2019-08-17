@@ -39,10 +39,10 @@ $stroke-width: 10px;
 
   &__inner {
     border: $stroke-width solid #F7F7F7;
-    min-height: 500px;
     padding: 70px 60px;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   &__number {
@@ -80,7 +80,7 @@ $stroke-width: 10px;
   &__subtitle {
     display: inline-block;
     font-size: 1.1em;
-    @include font-weight(book);
+    // @include font-weight(book);
     margin-bottom: $spacer * 2.5;
   }
 
@@ -88,5 +88,13 @@ $stroke-width: 10px;
     & + #{$component}__text-block {
       margin-top: $spacer * 3;
     }
+
+    em {
+      @include font-weight(semi-bold);
+    }
+  }
+
+  &__text {
+    @include font-weight(book);
   }
 }

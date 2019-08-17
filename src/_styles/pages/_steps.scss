@@ -1,4 +1,17 @@
 // // Helper Mixin for the containers
+$step-col-grid-gap: 32px;
+$step-row-grid-gap: 24px;
+
+@mixin step-template($areas) {
+  // Overwritable gaps
+  $step-col-grid-gap: 32px !default;
+  $step-row-grid-gap: 24px !default;
+
+  grid-gap: $step-col-grid-gap;
+  grid-row-gap: $step-row-grid-gap;
+  grid-template: template-areas($areas);
+}
+
 @function template-areas($areas) {
   $grid-template-value: null;
   @for $i from 1 through length($areas) {
@@ -22,7 +35,7 @@
   }
 
   // Adding two columns
-  $grid-template-value: append($grid-template-value, unquote('/ 1fr 1fr'), space);
+  $grid-template-value: append($grid-template-value, unquote('/ 1fr 1.5fr'), space);
 
   @return $grid-template-value;
 }
@@ -35,19 +48,34 @@ $steps-gutters: (
 
 #steps {
   .steps {
-    display: flex;
-    @include xy-grid;
-    @include xy-gutters($gutters: $card-gutters, $gutter-type: margin, $negative: true);
+    // display: flex;
+    // @include xy-grid;
+    // @include xy-gutters($gutters: $card-gutters, $gutter-type: margin, $negative: true);
+    display: grid;
+    grid-gap: $step-col-grid-gap;
+    grid-row-gap: $step-row-grid-gap;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(312px, auto); // Not supported in IE
 
-    .cell {
-      @include xy-cell(1/2, $gutter-output: true, $gutters: $card-gutters);
-    }
+    // .cell {
+    //   @include xy-cell(1/2, $gutter-output: true, $gutters: $card-gutters);
+    // }
   }
 
   @include breakpoint(medium) {
     .steps {
-      .cell {
-        @include xy-cell(1/2, $gutter-output: true, $gutters: $card-gutters);
+      $areas: ('step_1 step_2' auto),
+              ('step_1 step_3' auto);
+      @include step-template($areas);
+
+      // .cell {
+      //   @include xy-cell(1/2, $gutter-output: true, $gutters: $card-gutters);
+      // }
+    }
+
+    @for $i from 1 through 3 {
+      .step--#{$i} {
+        grid-area: unquote("step_" + $i);
       }
     }
   }
