@@ -1,5 +1,9 @@
 {
   "title": "Onze tarieven",
+  "info-block": {
+    "title": "Wij zijn geconventioneerd",
+    "text": "Dit betekent dat onze tarieven bepaald worden door het Rijksinstituut voor Ziekte- en Invaliditeitsverzekering (RIZIV). De terugbetaling is steeds afhankelijk van de aard en ernst van het probleem.  In sommige situaties worden de behandelingen terugbetaald via de aanvullende verzekering. Dan gelden er dus andere terugbetalingstarieven. De tegemoetkoming die u hierbij ontvangt is afhankelijk van uw ziekenfonds. Meer informatie kan u opvragen bij uw mutualiteit."
+  },
   "table": {
     "headers": [
       {

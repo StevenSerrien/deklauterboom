@@ -1,0 +1,50 @@
+// info-block styles
+$component: '.info-block';
+
+#{$component} {
+  min-height: 200px;
+  width: 100%;
+  box-shadow: 0px 9px 30px rgba(200, 200, 200, 0.30);
+  margin-bottom: 100px;
+  display: flex;
+  padding: 30px 100px 30px 71px;
+  overflow: hidden;
+  border-radius: 10px;
+
+
+  &__content {
+    flex-grow: 1;
+    margin-left: 90px;
+    @include font-weight(light);
+  }
+
+  &__illustration {
+
+    // max-height: 30px;
+    flex-basis: 10%;
+    // align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    align-self: center;
+    width: 100%;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include heading-4;
+    margin-bottom: $spacer * 2;
+  }
+
+
+  // &__content {
+
+  // }
+}

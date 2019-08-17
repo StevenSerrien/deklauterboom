@@ -53,6 +53,11 @@ $all-type-weights: append($default-type-weights, $only-secondary-type-weights, s
   @include font-weight(book);
 }
 
+@mixin heading-4 {
+  font-size: 1.25rem;
+  @include font-weight(book);
+}
+
 @include headings {
   font-family: $font-family-display;
 }

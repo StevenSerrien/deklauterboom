@@ -8,6 +8,7 @@
 {% import "_modules/organisms/feature-card/feature-card.nunjucks" as feature_card %}
 {% import "_modules/organisms/step/step.nunjucks" as step %}
 {% import "_modules/organisms/table/table.nunjucks" as table %}
+{% import "_modules/organisms/info-block/info-block.nunjucks" as infoblock %}
 
 
 {% block content %}
@@ -58,6 +59,8 @@
   <div class="section">
     <div class="pricing">
       {{ table.content({table_data: site.data.pricing.table })}}
+
+      {{ infoblock.content({})}}
     </div>
   </div>
 </section>
