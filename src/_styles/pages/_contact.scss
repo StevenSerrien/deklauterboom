@@ -1,0 +1,78 @@
+$contact-gutters: (
+  small: 10px,
+  medium: 75px,
+);
+
+$form-gutters: (
+  small: 10px,
+  medium: 50px,
+);
+
+#contact {
+  .contact {
+    @include xy-grid;
+    &__form,
+    &__info {
+      @include xy-cell(100%, $gutter-output: false, $gutters: 0);
+    }
+
+    &__form {
+      min-height: 500px;
+      padding: 50px 100px 85px 70px;
+      background: $brand-02;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .contact {
+      &__form,
+      &__info {
+        @include xy-cell(50%, $gutter-output: true, $gutters: $card-gutters);
+      }
+    }
+  }
+
+
+  .title {
+    @include heading-2;
+    @include font-weight(book);
+    em {
+      @include font-weight(bold);
+    }
+  }
+
+
+
+
+
+
+
+
+  .l-form {
+
+    width: 100%;
+    margin-top: $spacer * 6;
+
+    @include xy-grid;
+    @include xy-gutters($gutters: $card-gutters, $gutter-type: margin, $negative: true);
+
+    &__field {
+      @include xy-cell(100%, $gutter-output: true, $gutters: $card-gutters, $breakpoint: small);
+      margin-bottom: $spacer * 5;
+    }
+
+    &__submit {
+      margin-top: $spacer * 2;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(medium) {
+      &__field {
+        @include xy-cell(50%, $gutter-output: true, $gutters: $card-gutters, $breakpoint: medium);
+        &--full {
+          @include xy-cell(100%, $gutter-output: true, $gutters: $card-gutters, $breakpoint: medium);
+        }
+      }
+    }
+  }
+}

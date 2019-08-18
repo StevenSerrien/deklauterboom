@@ -1,0 +1,17 @@
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _class = spec.class or '' %}
+{% set _name = spec.name or '' %}
+{% set _type = spec.type or 'text' %}
+{% set _placeholder = spec.placeholder or 'Label' %}
+
+<div class="inputfield inputfield--{{_type}}">
+  {% if _type == 'textarea' %}
+  <textarea class="inputfield__input" name="{{_name}}" id="{{_name}}" placeholder="{{_name}}"></textarea>
+  {% else %}
+  <input class="inputfield__input" id="{{_name}}" type="{{_type}}" placeholder="{{_name}}">
+  {% endif %}
+  <label class="inputfield__label" for="{{_name}}">{{ _placeholder }}</label>
+</div>
+{% endmacro %}

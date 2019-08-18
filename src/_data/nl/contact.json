@@ -1,4 +1,40 @@
 {
   "title": "Contacteer ons",
-  "subtitle": "Vul het formulier in om contact op te nemen!"
+  "subtitle": "Vul het formulier in om contact op te nemen!",
+  "contactform": {
+    "title": "Heb je een <em>vraag</em>?",
+    "fields": [
+      {
+        "id": "first_name",
+        "placeholder": "voornaam",
+        "type": "text",
+        "full": false
+      },
+      {
+        "id": "last_name",
+        "placeholder": "achternaam",
+        "type": "text",
+        "full": false
+      },
+      {
+        "id": "email",
+        "placeholder": "email",
+        "type": "email",
+        "full": false
+      },
+      {
+        "id": "telephone",
+        "placeholder": "telefoonnr",
+        "type": "tel",
+        "full": false
+      },
+      {
+        "id": "message",
+        "placeholder": "Vertel ons kort waar we je mee kunnen helpen",
+        "type": "textarea",
+        "full": true
+      }
+    ],
+    "submit": "verzend mijn vraag"
+  }
 }

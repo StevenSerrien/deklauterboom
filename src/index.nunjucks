@@ -4,6 +4,7 @@
 {% import "_modules/header/header.nunjucks" as header %}
 {% import "_modules/footer/footer.nunjucks" as footer %}
 {% import "_modules/atoms/section-title/section-title.nunjucks" as section_title %}
+{% import "_modules/atoms/inputfield/inputfield.nunjucks" as inputfield %}
 
 {% import "_modules/organisms/feature-card/feature-card.nunjucks" as feature_card %}
 {% import "_modules/organisms/step/step.nunjucks" as step %}
@@ -80,8 +81,21 @@
 
 <section id="contact">
     {{section_title.content({bar_color: 'secondary', text: site.data.contact.title, subtext: site.data.contact.subtitle })}}
-  <div class="section">
-
+  <div class="section contact">
+    <div class="contact__form">
+      <h3 class="title">{{ site.data.contact.contactform.title }}</h3>
+      <form class="l-form">
+        {% for field in site.data.contact.contactform.fields %}
+        <div class="l-form__field {{ 'l-form__field--full' if field.full }}">
+          {{ inputfield.content({name: field.id, placeholder: field.placeholder, type: field.type})}}
+        </div>
+        {% endfor %}
+        <div class="l-form__field l-form__field--full l-form__submit">
+         <button type="submit" class="button" id="form-submit">{{site.data.contact.contactform.submit}}</button>
+        </div>
+      </form>
+    </div>
+    <div class="contact__info"></div>
   </div>
 </section>
 
