@@ -40,7 +40,7 @@ $form-gutters: (
         content: '';
         width: 120%;
         height: 120%;
-        background-color: transparentize($neutral, 0.4);
+        // background-color: transparentize($neutral, 0.4);
         position: absolute;
         z-index: -1;
         top: 50%;

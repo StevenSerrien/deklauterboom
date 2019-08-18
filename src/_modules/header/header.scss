@@ -2,8 +2,22 @@
 $component: '.header';
 
 $header-spacer-top: 3.1875rem;
-$header-height: 7.5rem;
+$header-height: 5.5rem;
 $header-logo-height: 3.25rem;
+
+
+.header-wrapper {
+
+  position: sticky;
+  top: 0px;
+  background: white;
+  z-index: 100;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &.scrolled {
+    box-shadow: 0 2px 8px 0 rgba(234,234,234,.5);
+  }
+}
 
 #{$component} {
     height: $header-height;
@@ -11,6 +25,7 @@ $header-logo-height: 3.25rem;
     position: relative;
     align-items: center;
     @include xy-grid-container();
+
 
     &__logo {
         height: $header-logo-height;
@@ -26,13 +41,37 @@ $header-logo-height: 3.25rem;
         display: flex;
         height: 100%;
          li {
+
            & + li {
               margin-left: 15px;
            }
           a {
+            outline: transparent;
             text-transform: lowercase;
             @include button-type;
             padding: 11px 15px;
+            text-decoration: none;
+
+            span {
+              position: relative;
+              &::after {
+                height: 30%;
+                width: 0%;
+                content: '';
+                position: absolute;
+                background: #E5F2F3;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.2s ease-in-out;
+              }
+            }
+            &.active,
+            &:hover {
+              span::after {
+                width: 80%;
+              }
+            }
           }
          }
       }

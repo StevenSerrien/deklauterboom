@@ -11,6 +11,8 @@ import Toastify from 'toastify-js';
 import { Foundation } from 'foundation-sites/js/foundation.core';
 import { Abide } from 'foundation-sites/js/foundation.abide';
 
+import './vendors/jquery.easing.js';
+
 
 
 // import 'foundation-core';
@@ -54,6 +56,101 @@ $(() => {
   .submit('submit', function(ev) {
     ev.preventDefault();
   });
+
+
+  var sections = $('section')
+  , nav = $('.header-wrapper')
+  , nav_height = nav.outerHeight();
+
+  var scrollTimeout;
+  var throttle = 200;
+
+  $(window).on('scroll', function () {
+    if (!scrollTimeout) {
+
+    scrollTimeout = setTimeout(function () {
+    var cur_pos = $(this).scrollTop() + (nav_height * 2);
+
+    if ($(this).scrollTop() > (nav_height * 2)) {
+      nav.addClass('scrolled');
+    } else {
+      nav.removeClass('scrolled');
+    }
+
+
+    sections.each(function() {
+      var top = $(this).offset().top,
+          bottom = top + $(this).outerHeight();
+
+
+
+      // console.log('top section', sections[0].getBoundingClientRect());
+      if (cur_pos >= top && cur_pos <= bottom) {
+      // if (cur_pos >= top && cur_pos <= bottom) {
+
+        nav.find('a').removeClass('active');
+        sections.removeClass('active');
+
+        $(this).addClass('active');
+
+        nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+
+
+      }
+      scrollTimeout = null;
+    });
+  }), throttle;
+  }
+  });
+
+  $('.page-scroll').on('click', function () {
+    var $el = $(this)
+      , id = $el.attr('href');
+
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - nav_height
+    }, 1000, 'easeInOutCubic');
+
+    return false;
+  });
+
+  // nav.find('a').on('click', function () {
+  //   var $el = $(this)
+  //     , id = $el.attr('href');
+
+  //   $('html, body').animate({
+  //     scrollTop: $(id).offset().top - nav_height
+  //   }, 1000, 'easeInOutCubic');
+
+  //   return false;
+  // });
+
+  // $('a[href*=#]').bind('click', function(e) {
+  //   e.preventDefault(); // prevent hard jump, the default behavior
+
+  //   var target = $(this).attr("href"); // Set the target as variable
+
+  //   // perform animated scrolling by getting top-position of target-element and set it as scroll target
+  //   $('html, body').stop().animate({
+  //       scrollTop: $(target).offset().top
+  //   }, 600, function() {
+  //       location.hash = target; //attach the hash (#jumptarget) to the pageurl
+  //   });
+
+  //   return false;
+  // });
+
+  // $(window).scroll(function() {
+  // var scrollDistance = $(window).scrollTop();
+
+  		// Assign active class to nav links while scolling
+//   $('section').each(function(i) {
+//     if ($(this).position().top <= scrollDistance) {
+//         $('.navigation a.active').removeClass('active');
+//         $('.navigation a').eq(i).addClass('active');
+//     }
+// });
+// }).scroll();
 
 
 
@@ -110,4 +207,6 @@ $(() => {
 
     Toastify(config).showToast();
   }
+
+
 });

@@ -4,17 +4,20 @@
 {% set _class = spec.class or '' %}
 {% set _navItems = spec.navItems or [] %}
 
-<header class="header {{_class}}">
-  <div class="header__logo">
-    <img src="images/logo/logo-text-black.svg" alt="De Klauterboom - logo">
-  </div>
- <nav class="header__nav">
-  <ul>
-    {% for navitem in _navItems %}
-      <li><a href="#">{{ navitem.name }}</a></li>
-    {% endfor %}
-  </ul>
- </nav>
+<div class="header-wrapper">
+  <header class="header {{_class}}">
+    <div class="header__logo">
+      <img src="images/logo/logo-text-black.svg" alt="De Klauterboom - logo">
+    </div>
+  <nav class="header__nav">
+    <ul>
+      {% for navitem in _navItems %}
+        <li><a class="page-scroll" href="#{{navitem.href}}"><span>{{ navitem.name }}</span></a></li>
+      {% endfor %}
+    </ul>
+  </nav>
 
-</header>
+  </header>
+</div>
+
 {% endmacro %}

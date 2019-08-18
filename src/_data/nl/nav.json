@@ -1,16 +1,21 @@
 [
   {
-    "name": "Over ons"
+    "name": "Over ons",
+    "href": "features"
   },{
-    "name": "Aanmelding"
+    "name": "Aanmelding",
+    "href": "steps"
   },
   {
-    "name": "Tarieven"
+    "name": "Tarieven",
+    "href": "pricing"
   },
   {
-    "name": "Ons team"
+    "name": "Ons team",
+    "href": "team"
   },
   {
-    "name": "Contact"
+    "name": "Contact",
+    "href": "contact"
   }
   ]
