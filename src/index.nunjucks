@@ -83,6 +83,7 @@
     {{section_title.content({bar_color: 'secondary', text: site.data.contact.title, subtext: site.data.contact.subtitle })}}
   <div class="section contact">
     <div class="contact__form">
+
       <h3 class="title">{{ site.data.contact.contactform.title }}</h3>
       <form id="contactform" data-action="" data-success-text="{{site.data.contact.contactform.validation.success.text}}" data-success-title="{{site.data.contact.contactform.validation.success.title}}" class="l-form" data-abide novalidate>
         {% for field in site.data.contact.contactform.fields %}
@@ -95,7 +96,31 @@
         </div>
       </form>
     </div>
-    <div class="contact__info"></div>
+    <div class="contact__info">
+      <div class="contact__address">
+        <h3 class="title">{{ site.data.contact.general.address.title }}</h3>
+        <span>{{ site.data.contact.general.address.name }}</span>
+        <span>{{ site.data.contact.general.address.street }}</span>
+        <span>{{ site.data.contact.general.address.postal }}</span>
+        <a href="mailto:{{site.data.contact.general.address.email}}">{{ site.data.contact.general.address.email }}</a>
+      </div>
+      <div class="contact__contact">
+        <div class="paper-plane"><svg class="inline-svg" src="images/handdrawn-icons/handdrawn-paperfly.svg"></svg></div>
+        <h3 class="title">{{ site.data.contact.general.telephone.title }}</h3>
+        <div class="contact__telephone">
+          <div class="contact__person">
+            <span>{{ site.data.contact.general.telephone.contacts[0].name }}</span>
+            <span>{{ site.data.contact.general.telephone.contacts[0].number }}</span>
+          </div>
+          <span class="contact__ampersand">&</span>
+          <div class="contact__person">
+            <span>{{ site.data.contact.general.telephone.contacts[1].name }}</span>
+            <span>{{ site.data.contact.general.telephone.contacts[1].number }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
 

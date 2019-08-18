@@ -10,16 +10,84 @@ $form-gutters: (
 
 #contact {
   .contact {
+    margin-top: $spacer * 5;
+    padding-bottom: 100px;
     @include xy-grid;
     &__form,
     &__info {
+      padding-top: 50px;
+      padding-bottom: 85px;
+      padding-left: 70px;
       @include xy-cell(100%, $gutter-output: false, $gutters: 0);
+      position: relative;
     }
 
     &__form {
+      position: relative;
       min-height: 500px;
-      padding: 50px 100px 85px 70px;
+      padding-right: 100px;
       background: $brand-02;
+    }
+
+    &__info {
+
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &::after {
+        content: '';
+        width: 120%;
+        height: 120%;
+        background-color: transparentize($neutral, 0.4);
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -20%;
+      }
+
+      span {
+        display: block;
+      }
+
+      span + a {
+        margin-top: $spacer * 4;
+      }
+
+      .contact__telephone {
+        display: flex;
+        align-items: center;
+      }
+
+      .contact__person {
+        span:last-of-type {
+          color: $neutral-dark;
+        }
+      }
+
+      .contact__ampersand {
+        @include heading-1;
+        @include font-weight(medium);
+        margin: 0 $spacer * 4;
+      }
+
+    }
+
+
+    .paper-plane {
+      position: absolute;
+      right: 50px;
+      width: 100px;
+      height: auto;
+      // top: 0;
+      transform: scaleX(-1);
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -36,6 +104,7 @@ $form-gutters: (
   .title {
     @include heading-2;
     @include font-weight(book);
+    margin-bottom: $spacer * 6;
     em {
       @include font-weight(bold);
     }
@@ -51,7 +120,6 @@ $form-gutters: (
   .l-form {
 
     width: 100%;
-    margin-top: $spacer * 6;
 
     @include xy-grid;
     @include xy-gutters($gutters: $card-gutters, $gutter-type: margin, $negative: true);

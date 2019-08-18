@@ -14,13 +14,18 @@
 
 a {
   color: inherit;
-  font-weight: 600;
+
   text-decoration: none;
   transition: color 0.1s ease-in-out;
   display: inline-block;
+
+  &:not(.button) {
+    text-decoration: underline;
+  }
 }
 
 .button {
+  font-weight: 600;
   background-color: $dark;
   line-height: 2.625rem;
   padding: 0 20px;
