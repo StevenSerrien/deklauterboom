@@ -7,9 +7,16 @@ import $ from "jquery";
 import Link from "../_modules/link/link";
 import Toastify from 'toastify-js';
 
+
+import { Foundation } from 'foundation-sites/js/foundation.core';
+
+// import 'foundation-core';
+
 $(() => {
   new Link(); // Activate Link modules logic
   // console.log('Welcome to Yeogurt!');
+  Foundation.addToJquery($);
+  $(document).foundation();
 
   var toastConfig = {
     text: "This is a toast",

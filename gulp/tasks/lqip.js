@@ -1,20 +1,16 @@
 'use strict';
 
 import path from 'path';
-import gulpif from 'gulp-if';
-// import pngquant from 'imagemin-pngquant';
-// import mozjpeg from 'imagemin-mozjpeg';
-// const pngquant = require('imagemin-pngquant');
-// const mozjpeg = require('imagemin-mozjpeg');
+import gulp from 'gulp';
+import { plugins, args, config, taskTarget, browserSync } from '../utils';
+
 const imagemin = require('gulp-imagemin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const scaleImages = require('gulp-scale-images')
 
 const rename = require("gulp-rename");
 const flatMap = require('flat-map').default
-// const imageminOptipng = require('imagemin-optipng');
-// const image = require('gulp-image');
-// const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+
 const twoVariantsPerFile = (file, cb) => {
 	const pngFile = file.clone()
 	pngFile.scale = {maxWidth: 200, format: 'png'}
@@ -30,12 +26,14 @@ const computeFileName = (output, scale, cb) => {
 	cb(null, fileName)
 }
 
+let dirs = config.directories;
+let dest = path.join(taskTarget, dirs.images.replace(/^_/, ''));
 
-export default function(gulp, plugins, args, config, taskTarget, browserSync) {
-  let dirs = config.directories;
-  let dest = path.join(taskTarget, dirs.images.replace(/^_/, ''));
 
-  // Imagemin
+
+
+
+  // LQIP
   gulp.task('lqip', () => {
     return gulp.src(path.join(dirs.source, dirs.images, '**/*.{jpg,jpeg,png}'))
         // .pipe(
@@ -73,4 +71,4 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
       }))
       .pipe(gulp.dest(dest));
   });
-}
+
