@@ -2,6 +2,8 @@
 @import 'node_modules/normalize.css/normalize';
 @import 'reset';
 
+@import 'vendors/vendors';
+
 @import 'settings/settings';
 @import 'settings/foundation-overrides';
 @import 'mixins/mixins';
@@ -54,3 +56,33 @@ section {
     margin-bottom: $spacer * 10;
   }
 }
+
+
+
+
+/*=============================================
+=                Vendor Overrides             =
+=============================================*/
+.toastify {
+  box-shadow: 0px 9px 30px rgba(200, 200, 200, 0.3);
+  background: $dark;
+
+  .title {
+    @include heading-4;
+    @include font-weight(medium);
+    color: $dark;
+  }
+  .text {
+    color: $neutral-darkest;
+  }
+
+  .text,
+  .title {
+    color: white;
+  }
+}
+
+
+/*=====  End of Section comment block  ======*/
+
+

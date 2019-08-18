@@ -35,6 +35,12 @@
         "full": true
       }
     ],
-    "submit": "verzend mijn vraag"
+    "submit": "verzend mijn vraag",
+    "validation": {
+      "success": {
+        "title": "Bedankt voor uw bericht!",
+        "text": "Wij nemen zo snel mogelijk contact op met u."
+      }
+    }
   }
 }
