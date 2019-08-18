@@ -43,6 +43,15 @@ $input-padding: $spacer;
     &::placeholder {
       color: transparent;
     }
+
+    &.is-invalid-input {
+      // color: #ff747a;
+      border-color: #ff747a;
+
+      & ~ #{$component}__label {
+        color: #ff747a;
+      }
+    }
   }
 
 

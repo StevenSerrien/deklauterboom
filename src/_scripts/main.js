@@ -9,6 +9,9 @@ import Toastify from 'toastify-js';
 
 
 import { Foundation } from 'foundation-sites/js/foundation.core';
+import { Abide } from 'foundation-sites/js/foundation.abide';
+
+
 
 // import 'foundation-core';
 
@@ -16,6 +19,11 @@ $(() => {
   new Link(); // Activate Link modules logic
   // console.log('Welcome to Yeogurt!');
   Foundation.addToJquery($);
+  Foundation.plugin(Abide, 'Abide');
+
+  Foundation.Abide.defaults.liveValidate = true;
+  // Foundation.Abide.defaults.validateOnBlur = true;
+
   $(document).foundation();
 
   var toastConfig = {
@@ -30,23 +38,30 @@ $(() => {
 
   var contactFormActivated = false;
 
-  $("#contactform").submit(function(event) {
-    event.preventDefault();
-    var actionUrl = $(event.target).data('action');
 
+
+
+
+  $(document)
+  .on("forminvalid.zf.abide", function(ev,frm) {
+    ev.preventDefault();
+  })
+  .on("formvalid.zf.abide", function(ev,frm) {
     if (!contactFormActivated) {
-      submitContactForm(event.target);
+      submitContactForm(ev.target);
     }
-
+  })
+  .submit('submit', function(ev) {
+    ev.preventDefault();
   });
+
+
 
   function submitContactForm(form, actionUrl = "https://deklauterboom-contact.herokuapp.com/") {
     contactFormActivated = true;
     form = $(form)[0];
 
     var successTitle = $(form).data('success-title');
-
-    console.log('>>>', successTitle);
     var successText = $(form).data('success-text');
 
 
@@ -57,34 +72,34 @@ $(() => {
     var telephone = $("#telephone").val();
 
 
-    showToast('<span class="title">' + successTitle + '</span> <br/ > <span class="text">' + successText + '</span>', 'success');
-    // $.ajax({
-    //   type: "POST",
-    //   url: actionUrl + "send_email",
-    //   data:
-    //     "first_name=" +
-    //     firstName +
-    //     "&last_name=" +
-    //     lastName +
-    //     "&email=" +
-    //     email +
-    //     "&telephone=" +
-    //     telephone +
-    //     "&message=" +
-    //     message,
-    //   success: function(text) {
-    //     contactFormActivated = false;
-    //     if (text && text.message == "success") {
-    //       form.reset();
-    //       showToast(text, success);
-    //     } else if (text && text.message == "failure_email") {
-    //       alert("Er ging iets mis. Bericht niet verstuurd.");
-    //     }
-    //   },
-    //   error: function() {
-    //     alert("Er ging iets mis. Bericht niet verstuurd.");
-    //   }
-    // });
+    $.ajax({
+      type: "POST",
+      url: actionUrl + "send_email",
+      data:
+        "first_name=" +
+        firstName +
+        "&last_name=" +
+        lastName +
+        "&email=" +
+        email +
+        "&telephone=" +
+        telephone +
+        "&message=" +
+        message,
+      success: function(text) {
+        contactFormActivated = false;
+        if (text && text.message == "success") {
+          form.reset();
+          showToast('<span class="title">' + successTitle + '</span> <br/ > <span class="text">' + successText + '</span>', 'success');
+        } else if (text && text.message == "failure_email") {
+          alert("Er ging iets mis. Bericht niet verstuurd.");
+        }
+      },
+      error: function() {
+        contactFormActivated = false;
+        alert("Er ging iets mis. Bericht niet verstuurd.");
+      }
+    });
   }
 
 

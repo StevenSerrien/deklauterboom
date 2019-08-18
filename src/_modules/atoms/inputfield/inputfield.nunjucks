@@ -8,9 +8,9 @@
 
 <div class="inputfield inputfield--{{_type}}">
   {% if _type == 'textarea' %}
-  <textarea class="inputfield__input" name="{{_name}}" id="{{_name}}" placeholder="{{_name}}"></textarea>
+  <textarea class="inputfield__input" name="{{_name}}" id="{{_name}}" placeholder="{{_name}}" required></textarea>
   {% else %}
-  <input class="inputfield__input" id="{{_name}}" name="{{_name}}" type="{{_type}}" placeholder="{{_name}}">
+  <input class="inputfield__input" id="{{_name}}" name="{{_name}}" type="{{_type}}" placeholder="{{_name}}" required>
   {% endif %}
   <label class="inputfield__label" for="{{_name}}">{{ _placeholder }}</label>
 </div>
