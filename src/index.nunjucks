@@ -84,7 +84,7 @@
   <div class="section contact">
     <div class="contact__form">
       <h3 class="title">{{ site.data.contact.contactform.title }}</h3>
-      <form class="l-form">
+      <form id="contactform" data-action="" class="l-form">
         {% for field in site.data.contact.contactform.fields %}
         <div class="l-form__field {{ 'l-form__field--full' if field.full }}">
           {{ inputfield.content({name: field.id, placeholder: field.placeholder, type: field.type})}}

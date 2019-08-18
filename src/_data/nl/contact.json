@@ -25,7 +25,7 @@
       {
         "id": "telephone",
         "placeholder": "telefoonnr",
-        "type": "tel",
+        "type": "text",
         "full": false
       },
       {
