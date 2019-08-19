@@ -10,11 +10,22 @@
       <img src="images/logo/logo-text-black.svg" alt="De Klauterboom - logo">
     </div>
   <nav class="header__nav">
-    <ul>
-      {% for navitem in _navItems %}
-        <li><a class="page-scroll" href="#{{navitem.href}}"><span>{{ navitem.name }}</span></a></li>
-      {% endfor %}
-    </ul>
+    <label class="header__nav-hamburger" for="hamburger">
+      <span class="header__nav-hamburger-line"></span>
+      <span class="header__nav-hamburger-line"></span>
+      <span class="header__nav-hamburger-line"></span>
+    </label>
+    <input type="checkbox" id="hamburger">
+    <div class="header__navitems-wrapper">
+      <label class="header__nav-close" for="hamburger">
+        <div class="header__nav-close-glow"></div>
+      </label>
+      <ul>
+        {% for navitem in _navItems %}
+          <li><a class="page-scroll" href="#{{navitem.href}}"><span>{{ navitem.name }}</span></a></li>
+        {% endfor %}
+      </ul>
+    </div>
   </nav>
 
   </header>
