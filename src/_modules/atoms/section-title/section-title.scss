@@ -35,6 +35,8 @@ $height-bar: 10px;
   }
 
   &__sub {
+    max-width: 80%;
+    text-align: center;
     margin-top: $spacer * 4;
     @include heading-2;
     @include font-weight(light);

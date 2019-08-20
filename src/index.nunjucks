@@ -105,7 +105,6 @@
         <a href="mailto:{{site.data.contact.general.address.email}}">{{ site.data.contact.general.address.email }}</a>
       </div>
       <div class="contact__contact">
-        <div class="paper-plane"><svg class="inline-svg" src="images/handdrawn-icons/handdrawn-paperfly.svg"></svg></div>
         <h3 class="title">{{ site.data.contact.general.telephone.title }}</h3>
         <div class="contact__telephone">
           <div class="contact__person">
@@ -118,7 +117,7 @@
             <span>{{ site.data.contact.general.telephone.contacts[1].number }}</span>
           </div>
         </div>
-
+          <div class="paper-plane"><svg class="inline-svg" src="images/handdrawn-icons/handdrawn-paperfly.svg"></svg></div>
       </div>
     </div>
   </div>
