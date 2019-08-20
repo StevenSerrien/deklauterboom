@@ -15,7 +15,7 @@ $special-bar-stroke: 4px;
   &__icon {
     display: flex;
     height: 5rem;
-    width: 100%;
+
     justify-content: flex-end;
     align-self: center;
 
@@ -49,26 +49,20 @@ $special-bar-stroke: 4px;
     }
   }
 
-  // &__bottom {
-  //   flex-grow: 1;
-  //   align-items: flex-end;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: flex-end;
-  // }
-
   &--special {
-    &::after, &::before {
-      background-color: $dark;
-      content: '';
-      position: absolute;
-    }
+    @include breakpoint(large) {
+      &::after, &::before {
+        background-color: $dark;
+        content: '';
+        position: absolute;
+      }
 
-    &:before {
-      width: $special-bar-stroke;
-      height: 30%;
-      bottom: 0;
-      left: 0;
+      &:before {
+        width: $special-bar-stroke;
+        height: 30%;
+        bottom: 0;
+        left: 0;
+      }
     }
   }
 

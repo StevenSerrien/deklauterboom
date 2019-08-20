@@ -70,10 +70,6 @@ $illu-block-height: 4.75rem;
 
 
   @include breakpoint(small) {
-    .section {
-      min-height: 100vh;
-    }
-
     .illustration {
       height: 13.75rem;
       width: 100%;
