@@ -17,8 +17,8 @@ $step-row-grid-gap: 24px;
   @for $i from 1 through length($areas) {
     $area: nth($areas, $i);
 
-    $dashboard-row-height: 312px !default;
-    $dashboard-row-small-height: 110px !default;
+    $row-height: 312px !default;
+    $row-small-height: 110px !default;
 
     // Append the given area
     $grid-template-value: append($grid-template-value, quote(nth($area, 1)), space);
@@ -29,7 +29,7 @@ $step-row-grid-gap: 24px;
     }
     // If no value given, use default values */
     @else {
-      $row-height-to-apply: if($i == 2, $dashboard-row-small-height, $dashboard-row-height);
+      $row-height-to-apply: if($i == 2, $row-small-height, $row-height);
       $grid-template-value: append($grid-template-value, $row-height-to-apply, space);
     }
   }

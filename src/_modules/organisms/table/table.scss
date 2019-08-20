@@ -1,13 +1,5 @@
 // table styles
 $breakpoint: 750px;
-$heading-color: #43BAC0;
-
-// .wrapper {
-//   width: 100%;
-//   max-width: 1000px;
-//   margin: 1em auto;
-//   padding: 1em;
-// }
 
 $component: '.table';
 $cell: $component + '__cell';
@@ -60,7 +52,7 @@ $row: $component + '__row';
       box-sizing: border-box;
       flex-grow: 1;
 
-      padding: 0.8em 1.2em;
+      padding: 1.875rem 1.875rem;
       overflow: hidden; // Or flex might break
       list-style: none;
       align-items: center;
@@ -139,7 +131,6 @@ $row: $component + '__row';
     }
 
     .topic-cell {
-      background-color: $heading-color;
       color: white;
       font-weight: 700;
       order: -1;
