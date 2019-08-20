@@ -42,6 +42,13 @@
  }
 }
 
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+      $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
 
 // white-space: normal;
 //     overflow-wrap: break-word;

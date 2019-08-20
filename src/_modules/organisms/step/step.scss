@@ -7,17 +7,31 @@ $component: '.step';
 $badge-dimension: 75px;
 $badge-buffer: 60px;
 
-$badge-wrapper-dimension: $badge-dimension + $badge-buffer;
+$badge-map: (
+  "small": (
+    "dimensions": 55px,
+    "buffer": 40px,
+  ),
+  "medium": (
+    "dimensions": 75px,
+    "buffer": 60px
+  )
+);
+
+$badge-wrapper-dimension-small: map-deep-get($badge-map, "small", "dimensions") + map-deep-get($badge-map, "small", "buffer");
+$badge-wrapper-dimension-medium: map-deep-get($badge-map, "medium", "dimensions") + map-deep-get($badge-map, "medium", "buffer");
+
+
 $stroke-width: 10px;
 
 #{$component} {
   position: relative;
-  padding-left: ($badge-wrapper-dimension / 3) - $stroke-width;
-  padding-top: ($badge-wrapper-dimension / 3) - $stroke-width;
+  padding-left: ($badge-wrapper-dimension-small / 3) - $stroke-width;
+  padding-top: ($badge-wrapper-dimension-small / 3) - $stroke-width;
 
   &__badge-wrapper {
-    width: $badge-dimension + ($badge-buffer / 2);
-    height: $badge-dimension + ($badge-buffer / 2);
+    width: map-deep-get($badge-map, "small", "dimensions") + (map-deep-get($badge-map, "small", "buffer") / 2);
+    height: map-deep-get($badge-map, "small", "dimensions") + (map-deep-get($badge-map, "small", "buffer") / 2);
     background-color: white;
     position: absolute;
     left: 0;
@@ -25,8 +39,8 @@ $stroke-width: 10px;
   }
 
   &__badge {
-    width: $badge-dimension;
-    height: $badge-dimension;
+    width: map-deep-get($badge-map, "small", "dimensions");
+    height: map-deep-get($badge-map, "small", "dimensions");
     position: absolute;
     // transform: translate(-50%, -50%);
     // left: 50%;
@@ -39,7 +53,7 @@ $stroke-width: 10px;
 
   &__inner {
     border: $stroke-width solid #F7F7F7;
-    padding: 70px 60px;
+    padding: 40px 40px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -48,7 +62,7 @@ $stroke-width: 10px;
   &__number {
     @include heading-1;
     @include font-weight(semi-bold);
-    line-height: $badge-dimension;
+    line-height: map-deep-get($badge-map, "small", "dimensions");
   }
 
   &__title {
@@ -80,7 +94,6 @@ $stroke-width: 10px;
   &__subtitle {
     display: inline-block;
     font-size: 1.1em;
-    // @include font-weight(book);
     margin-bottom: $spacer * 2.5;
   }
 
@@ -96,5 +109,25 @@ $stroke-width: 10px;
 
   &__text {
     @include font-weight(book);
+  }
+
+  @include breakpoint(medium) {
+    &__badge-wrapper {
+      width: map-deep-get($badge-map, "medium", "dimensions") + (map-deep-get($badge-map, "medium", "buffer") / 2);
+      height: map-deep-get($badge-map, "medium", "dimensions") + (map-deep-get($badge-map, "medium", "buffer") / 2);
+    }
+
+    &__badge {
+      width: map-deep-get($badge-map, "medium", "dimensions");
+      height: map-deep-get($badge-map, "medium", "dimensions");
+    }
+
+    &__number {
+      line-height: map-deep-get($badge-map, "medium", "dimensions");
+    }
+
+    &__inner {
+      padding: 70px 60px;
+    }
   }
 }

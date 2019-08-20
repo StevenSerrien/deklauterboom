@@ -48,29 +48,18 @@ $steps-gutters: (
 
 #steps {
   .steps {
-    // display: flex;
-    // @include xy-grid;
-    // @include xy-gutters($gutters: $card-gutters, $gutter-type: margin, $negative: true);
     display: grid;
     grid-gap: $step-col-grid-gap;
     grid-row-gap: $step-row-grid-gap;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(312px, auto); // Not supported in IE
-
-    // .cell {
-    //   @include xy-cell(1/2, $gutter-output: true, $gutters: $card-gutters);
-    // }
   }
 
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     .steps {
       $areas: ('step_1 step_2' auto),
               ('step_1 step_3' auto);
       @include step-template($areas);
-
-      // .cell {
-      //   @include xy-cell(1/2, $gutter-output: true, $gutters: $card-gutters);
-      // }
     }
 
     @for $i from 1 through 3 {
