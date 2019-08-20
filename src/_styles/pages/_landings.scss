@@ -116,4 +116,10 @@ $illu-block-height: 4.75rem;
       margin-left: -$width-illustration-buffer-large;
     }
   }
+
+  @include breakpoint(xxlarge) {
+    .section {
+      min-height: 50vh;
+    }
+  }
 }

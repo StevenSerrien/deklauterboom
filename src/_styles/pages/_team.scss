@@ -11,6 +11,15 @@ $card-gutters: (
 
     .cell {
       @include xy-cell(100%, $gutter-output: true, $gutters: $card-gutters, $breakpoint: small);
+
+      & + .cell {
+        margin-top: $spacer * 10;
+      }
+      &:last-child {
+        .person {
+          margin-left: auto;
+        }
+      }
     }
   }
 

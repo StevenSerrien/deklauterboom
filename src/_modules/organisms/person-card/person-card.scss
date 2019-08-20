@@ -113,6 +113,11 @@ $component: '.person';
       position: absolute;
       left: 20%;
       bottom: -10%;
+
+      @include breakpoint(small down) {
+        left: -20%;
+        bottom: -10%;
+      }
     }
   }
 }
