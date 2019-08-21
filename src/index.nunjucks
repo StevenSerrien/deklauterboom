@@ -117,14 +117,14 @@
             <span>{{ site.data.contact.general.telephone.contacts[1].number }}</span>
           </div>
         </div>
-          <div class="paper-plane"><svg class="inline-svg" src="images/handdrawn-icons/handdrawn-paperfly.svg"></svg></div>
+
       </div>
     </div>
   </div>
 </section>
 
 
-
+{{footer.content({})}}
 
 
 
