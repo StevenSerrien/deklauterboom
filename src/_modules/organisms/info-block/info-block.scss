@@ -4,26 +4,27 @@ $component: '.info-block';
 #{$component} {
   min-height: 200px;
   width: 100%;
-  box-shadow: 0px 9px 30px rgba(200, 200, 200, 0.30);
+  // box-shadow: 0px 9px 30px rgba(200, 200, 200, 0.30);
   margin-bottom: 30px;
   padding: 30px;
   display: flex;
   overflow: hidden;
   border-radius: 10px;
   position: relative;
+  border-top: 3px solid $neutral;
 
 
-  &::after {
-    position: absolute;
-    width: 30%;
-    content: '';
-    height: 240%;
-    right: 0;
-    top: -10%;
-    transform: rotate(35deg);
-    background: $brand-01;
-    z-index: -1;
-  }
+  // &::after {
+  //   position: absolute;
+  //   width: 30%;
+  //   content: '';
+  //   height: 240%;
+  //   right: 0;
+  //   top: -10%;
+  //   transform: rotate(35deg);
+  //   background: $brand-01;
+  //   z-index: -1;
+  // }
 
 
   &__content {
@@ -63,13 +64,15 @@ $component: '.info-block';
   }
 
   @include breakpoint(medium) {
-    padding: 30px 100px 30px 71px;
+    padding: 50px 100px 30px 0px;
+
     &__content {
       margin-left: 90px;
     }
 
     &__illustration {
       display: flex;
+      position: relative;
     }
 
     &::after {

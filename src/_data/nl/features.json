@@ -1,19 +1,19 @@
 [
   {
     "type": "speech",
-    "icon_path": "images/handdrawn-icons/handdrawn-speech.svg",
+    "icon_path": "images/handdrawn-icons/handdrawn-p-person.svg",
     "title": "Taal- en spraakontwikkeling",
     "text": "Het verwerven van de taal is een zeer belangrijk aspect in de ontwikkeling van een kind. Er is sprake van een taalprobleem wanneer de taalontwikkeling vertraagd of afwijkend is van dat van leeftijdsgenootjes."
   },
   {
     "type": "letters",
-    "icon_path": "images/handdrawn-icons/handdrawn-letters.svg",
+    "icon_path": "images/handdrawn-icons/handdrawn-p-puzzle.svg",
     "title": "Leerproblemen",
     "text": "Voor sommige kinderen verloopt het leren lezen, schrijven en/of rekenen niet vanzelfsprekend. Als uw kind problemen vertoont bij het leren lezen, schrijven en/of rekenen, dan spreken we van een leerprobleem."
   },
   {
     "type": "book",
-    "icon_path": "images/handdrawn-icons/handdrawn-book.svg",
+    "icon_path": "images/handdrawn-icons/handdrawn-p-mouth.svg",
     "title": "Afwijkende mondgewoonten",
     "text": "In samenwerking met de orthodont richten wij ons op het herstellen van het verstoord evenwicht in het functioneren van de mondspieren. <em>(vb. mondademen, afwijkende slikpatronen, duim-, vinger-, speenzuigen, ..)</em>"
   }

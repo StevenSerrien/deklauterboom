@@ -14,8 +14,8 @@ $special-bar-stroke: 4px;
 
   &__icon {
     display: flex;
-    height: 5rem;
-
+    height: 5.5rem;
+    margin-bottom: 1.5625rem;
     justify-content: flex-end;
     align-self: center;
 
@@ -57,12 +57,12 @@ $special-bar-stroke: 4px;
         position: absolute;
       }
 
-      &:before {
-        width: $special-bar-stroke;
-        height: 30%;
-        bottom: 0;
-        left: 0;
-      }
+      // &:before {
+      //   width: $special-bar-stroke;
+      //   height: 30%;
+      //   bottom: 0;
+      //   left: 0;
+      // }
     }
   }
 
@@ -76,8 +76,7 @@ $special-bar-stroke: 4px;
 
   &#letters {
     .feature-card__icon {
-      width: 30%;
-      align-self: center;
+      // align-self: center;
     }
   }
 }

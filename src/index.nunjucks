@@ -62,7 +62,7 @@
     <div class="pricing">
       {{ table.content({table_data: site.data.pricing.table })}}
 
-      {{ infoblock.content({title: site.data.pricing.info_block.title, text: site.data.pricing.info_block.text, icon_path: "images/handdrawn-icons/handdrawn-piggy.svg"})}}
+      {{ infoblock.content({title: site.data.pricing.info_block.title, text: site.data.pricing.info_block.text, icon_path: "images/handdrawn-icons/handdrawn-p-coin.svg"})}}
     </div>
   </div>
 </section>
