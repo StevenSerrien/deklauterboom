@@ -9,11 +9,11 @@ $width-illustration-medium: $width-intro-medium + $width-illustration-buffer-med
 
 
 $illu-block-height: 4.75rem;
+$illustration-height-normal: 39.0625rem;
 
 
 #landing {
   .intro {
-
     padding: 1.875rem 2.1875rem;
     background-color: $brand-02;
     @include headings {
@@ -79,10 +79,12 @@ $illu-block-height: 4.75rem;
 
 
   @include breakpoint(medium) {
+    margin-top: $spacer * 4;
     .section {
+
       display: flex;
       flex-direction: row;
-      min-height: 80vh;
+      // min-height: 80vh;
 
     }
     .cover {
@@ -98,7 +100,7 @@ $illu-block-height: 4.75rem;
     }
 
     .illustration {
-      height: 90%;
+      height: $illustration-height-normal;
       order: 2;
       width: xy-cell-size($width-illustration-medium);
       margin-left: -64%;
@@ -107,6 +109,9 @@ $illu-block-height: 4.75rem;
   }
 
   @include breakpoint(large) {
+    .section {
+
+    }
     .intro {
       width: xy-cell-size($width-intro-large);
     }
@@ -118,8 +123,10 @@ $illu-block-height: 4.75rem;
   }
 
   @include breakpoint(xxlarge) {
+    margin-top: $spacer * 5;
     .section {
-      min-height: 50vh;
+
+      // min-height: 50vh;
     }
   }
 }

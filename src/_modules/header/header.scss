@@ -51,11 +51,11 @@ $header-logo-height: 3.25rem;
             span {
               position: relative;
               &::after {
-                height: 30%;
+                height: 10%;
                 width: 0%;
                 content: '';
                 position: absolute;
-                background: #E5F2F3;
+                background: #22283c;
                 bottom: 0;
                 left: 0;
                 z-index: -1;

@@ -51,16 +51,22 @@ section {
   flex-direction: column;
   @include xy-grid-container();
   overflow: hidden;
-  margin-bottom: $spacer * 13;
+
 
   .section-title {
     margin-bottom: $spacer * 8;
   }
 
   @include breakpoint(medium) {
-    margin-bottom: $spacer * 17;
     .section-title {
       margin-bottom: $spacer * 10;
+    }
+  }
+
+  &:not(:first-of-type) {
+    padding-top: $spacer * 13;
+    @include breakpoint(medium) {
+      padding-top: $spacer * 17;
     }
   }
 }

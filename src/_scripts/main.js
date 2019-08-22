@@ -109,7 +109,7 @@ $(() => {
 
     mobileHamburger.checked = false;
     $('html, body').animate({
-      scrollTop: $(id).offset().top - nav_height
+      scrollTop: $(id).offset().top
     }, 1000, 'easeInOutCubic');
 
     return false;
