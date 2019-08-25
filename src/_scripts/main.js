@@ -120,6 +120,11 @@ $(() => {
     contactFormActivated = true;
     form = $(form)[0];
 
+    var loadingClass = 'button--loading';
+
+    var submitButton = $(form.querySelector('[type*="submit"]'));
+    submitButton.addClass(loadingClass);
+
     var successTitle = $(form).data('success-title');
     var successText = $(form).data('success-text');
 
@@ -149,12 +154,14 @@ $(() => {
         contactFormActivated = false;
         if (text && text.message == "success") {
           form.reset();
+          submitButton.removeClass(loadingClass);
           showToast('<span class="title">' + successTitle + '</span> <br/ > <span class="text">' + successText + '</span>', 'success');
         } else if (text && text.message == "failure_email") {
           alert("Er ging iets mis. Bericht niet verstuurd.");
         }
       },
       error: function() {
+        submitButton.removeClass(loadingClass);
         contactFormActivated = false;
         alert("Er ging iets mis. Bericht niet verstuurd.");
       }

@@ -53,18 +53,16 @@ $steps-gutters: (
     grid-row-gap: $step-row-grid-gap;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(312px, auto); // Not supported in IE
-  }
 
-  @include breakpoint(large) {
-    .steps {
+    @include breakpoint(large) {
       $areas: ('step_1 step_2' auto),
               ('step_1 step_3' auto);
       @include step-template($areas);
-    }
 
-    @for $i from 1 through 3 {
-      .step--#{$i} {
-        grid-area: unquote("step_" + $i);
+      @for $i from 1 through 3 {
+        .step--#{$i} {
+          grid-area: unquote("step_" + $i);
+        }
       }
     }
   }

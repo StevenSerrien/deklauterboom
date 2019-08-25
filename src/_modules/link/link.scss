@@ -11,6 +11,8 @@
 // }
 
 // mouse over link
+$line-height: 2.625rem;
+
 
 a {
   color: inherit;
@@ -27,7 +29,7 @@ a {
 .button {
   font-weight: 600;
   background-color: $dark;
-  line-height: 2.625rem;
+  line-height: $line-height;
   padding: 0 20px;
   border-radius: 3px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
@@ -39,10 +41,45 @@ a {
   transition: transform .1s cubic-bezier(.25,.25,.315,1.35);
   // transition: box-shadow .2s cubic-bezier(.25,.25,.315,1.35);
   white-space: nowrap;
+  position: relative;
+  transition: color 0.5 linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 
   &:hover {
     transform: translateY(0px);
     // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  &--loading {
+    position: relative;
+    color: transparent;
+    // pointer-events: none;
+    cursor: not-allowed;
+    &::after {
+      content: '';
+      height: $line-height / 2;
+      position: absolute;
+      width: $line-height / 2;
+      background-color: transparent;
+      border: 2px solid #222;
+      border-top-color: $white;
+      animation: 1s spin linear infinite;
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
