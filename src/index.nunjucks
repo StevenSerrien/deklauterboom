@@ -23,9 +23,9 @@
       <div class="illustration" style="background-image: url(images/new/beautiful-beauty-blond-hair-1843358.jpg)">
       </div>
       <div class="intro">
-        <h1 class="display-1">Op zoek naar een <span class="medium">logopediste?</span></h1>
+        <h1 class="display-1">Op zoek naar een <span class="medium">logopedist?</span></h1>
         <p>Welkom bij logopediepraktijk De Klauterboom, gevestigd te Wilrijk. <br/>
-        De Klauterboom biedt logopedisch onderzoek en behandeling voor kinderen en jongvolwassenen.”
+        De Klauterboom biedt logopedisch onderzoek en behandeling voor kinderen en jongvolwassenen.
         </p>
 
         {{link.content({href: '#contact', type: 'button', class:'cta page-scroll', text: 'maak een afspraak'})}}
