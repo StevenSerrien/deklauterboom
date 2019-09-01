@@ -18,13 +18,13 @@
       },
       {
         "id": "email",
-        "placeholder": "email",
+        "placeholder": "e-mail",
         "type": "email",
         "full": false
       },
       {
         "id": "telephone",
-        "placeholder": "telefoonnr",
+        "placeholder": "telefoonnr.",
         "type": "text",
         "full": false
       },
@@ -49,7 +49,10 @@
       "name": "De Klauterboom",
       "street": "Prins Boudewijnlaan 82 bus 1",
       "postal": "2610 Wilrijk",
-      "email": "info@deklauterboom.be"
+      "email": "info@deklauterboom.be",
+      "extra": {
+        "one": "Ter info: Vergeet uw parkeerschijf niet te plaatsen <br/>indien u met de auto komt."
+      }
     },
     "telephone": {
       "title": "Liever <em>telefonisch</em> contact?",

@@ -1,5 +1,5 @@
 {
-  "title": "Onze tarieven",
+  "title": "Tarieven",
   "info_block": {
     "title": "Wij zijn geconventioneerd",
     "text": "Dit betekent dat onze tarieven bepaald worden door het Rijksinstituut voor Ziekte- en Invaliditeitsverzekering (RIZIV). De terugbetaling is steeds afhankelijk van de aard en ernst van het probleem.  In sommige situaties worden de behandelingen terugbetaald via de aanvullende verzekering. Dan gelden er dus andere terugbetalingstarieven. De tegemoetkoming die u hierbij ontvangt is afhankelijk van uw ziekenfonds. Meer informatie kan u opvragen bij uw mutualiteit."
@@ -26,35 +26,35 @@
           "sublabel": "30’ minuten"
         },
         "col_1": "32,20",
-        "col_2": "29,20",
-        "col_3": "24,70"
+        "col_2": "24,70",
+        "col_3": "29,20"
       },
       {
         "type": {
           "title": "Therapie op praktijk",
-          "sublabel": "30’ minuten"
+          "sublabel": "30 minuten"
         },
         "col_1": "23,60",
-        "col_2": "21,60",
-        "col_3": "18,10"
+        "col_2": "18,10",
+        "col_3": "21,60"
       },
       {
         "type": {
           "title": "Therapie op school",
-          "sublabel": "30’ minuten"
+          "sublabel": "30 minuten"
         },
         "col_1": "22,80",
-        "col_2": "20,80",
-        "col_3": "16,80"
+        "col_2": "16,80",
+        "col_3": "20,80"
       },
       {
         "type": {
           "title": "Therapie op praktijk",
-          "sublabel": "60’ minuten"
+          "sublabel": "60 minuten"
         },
         "col_1": "47,40",
-        "col_2": "42,90",
-        "col_3": "36,40"
+        "col_2": "36,40",
+        "col_3": "42,90"
       },
       {
         "type": {

@@ -25,7 +25,8 @@
       <div class="intro">
         <h1 class="display-1">Op zoek naar een <span class="medium">logopediste?</span></h1>
         <p>Welkom bij logopediepraktijk De Klauterboom, gevestigd te Wilrijk. <br/>
-                    Onze praktijk is gespecialiseerd  in verscheidene velden.</p>
+        De Klauterboom biedt logopedisch onderzoek en behandeling voor kinderen en jongvolwassenen.”
+        </p>
 
         {{link.content({href: '#contact', type: 'button', class:'cta page-scroll', text: 'maak een afspraak'})}}
       </div>
@@ -103,6 +104,7 @@
         <span>{{ site.data.contact.general.address.street }}</span>
         <span>{{ site.data.contact.general.address.postal }}</span>
         <a href="mailto:{{site.data.contact.general.address.email}}">{{ site.data.contact.general.address.email }}</a>
+        <span class="info">{{ site.data.contact.general.address.extra.one }}</span>
       </div>
       <div class="contact__contact">
         <h3 class="title">{{ site.data.contact.general.telephone.title }}</h3>
