@@ -226,7 +226,7 @@ $row: $component + '__row';
   }
 
   .Rtable-row {
-    background-color: red;
+    background-color: $brand-01;
     .Rtable-cell {
 
       &:first-child {
