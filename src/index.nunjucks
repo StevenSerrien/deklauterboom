@@ -3,12 +3,170 @@
 {% import "_modules/link/link.nunjucks" as link %}
 {% import "_modules/header/header.nunjucks" as header %}
 {% import "_modules/footer/footer.nunjucks" as footer %}
+{% import "_modules/atoms/section-title/section-title.nunjucks" as section_title %}
+{% import "_modules/atoms/inputfield/inputfield.nunjucks" as inputfield %}
+
+{% import "_modules/organisms/feature-card/feature-card.nunjucks" as feature_card %}
+{% import "_modules/organisms/step/step.nunjucks" as step %}
+{% import "_modules/organisms/table/table.nunjucks" as table %}
+{% import "_modules/organisms/info-block/info-block.nunjucks" as infoblock %}
+{% import "_modules/organisms/person-card/person-card.nunjucks" as personcard %}
+
 
 {% block content %}
-<div class="cover">
+ {{header.content({navItems: site.data.nav})}}
+
+
+<section id="landing">
+  <div class="section">
+    <div class="cover">
+      <div class="illustration" style="background-image: url(images/new/beautiful-beauty-blond-hair-1843358.jpg)">
+      </div>
+      <div class="intro">
+        <h1 class="display-1">Op zoek naar een <span class="medium">logopedist?</span></h1>
+        <p>Welkom bij logopediepraktijk De Klauterboom, gevestigd te Wilrijk. <br/>
+        De Klauterboom biedt logopedisch onderzoek en behandeling voor kinderen en jongvolwassenen.
+        </p>
+
+        {{link.content({href: '#contact', type: 'button', class:'cta page-scroll', text: 'contacteer ons'})}}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="features">
+  {{section_title.content({text: 'Wat behandelen wij'})}}
+  <div class="section">
+  <div class="features">
+    {% for feature in site.data.features %}
+      {{feature_card.content({ type: feature.type, title: feature.title, text: feature.text, icon_path: feature.icon_path, special: true if loop.first, class: 'cell' })}}
+    {% endfor %}
+  </div>
+  </div>
+</section>
+
+<section id="steps">
+  {{section_title.content({bar_color: 'secondary', text: 'Hoe start je bij ons?'})}}
+  <div class="section">
+    <div class="steps">
+      {% for stepdata in site.data.steps %}
+          {{ step.content({number: loop.index, title: stepdata.title, content: stepdata.text, class: 'cell step--' + loop.index })}}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  {{section_title.content({text: site.data.pricing.title })}}
+  <div class="section">
+    <div class="pricing">
+      {{ table.content({table_data: site.data.pricing.table })}}
+
+      {{ infoblock.content({title: site.data.pricing.info_block.title, text: site.data.pricing.info_block.text, icon_path: "images/handdrawn-icons/handdrawn-p-coin.svg"})}}
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  {{section_title.content({bar_color: 'secondary', text: site.data.team.title })}}
+  <div class="section team">
+
+  {% for person in site.data.team.persons%}
+  <div class="cell">
+    {{ personcard.content({name: person.name, title: person.function, image: person.photo_url, number: loop.index})}}
+  </div>
+  {% endfor %}
+  </div>
+</section>
+
+<section id="contact">
+    {{section_title.content({bar_color: 'secondary', text: site.data.contact.title, subtext: site.data.contact.subtitle })}}
+  <div class="section contact">
+    <div class="contact__form">
+
+      <h3 class="title">{{ site.data.contact.contactform.title }}</h3>
+      <form id="contactform" data-action="" data-success-text="{{site.data.contact.contactform.validation.success.text}}" data-success-title="{{site.data.contact.contactform.validation.success.title}}" class="l-form" data-abide novalidate>
+        {% for field in site.data.contact.contactform.fields %}
+        <div class="l-form__field {{ 'l-form__field--full' if field.full }}">
+          {{ inputfield.content({name: field.id, placeholder: field.placeholder, type: field.type})}}
+        </div>
+        {% endfor %}
+        <div class="l-form__field l-form__field--full l-form__submit">
+         <button type="submit" class="button" id="form-submit">{{site.data.contact.contactform.submit}}</button>
+        </div>
+      </form>
+    </div>
+    <div class="contact__info">
+      <div class="contact__address">
+        <h3 class="title">{{ site.data.contact.general.address.title }}</h3>
+        <span>{{ site.data.contact.general.address.name }}</span>
+        <span>{{ site.data.contact.general.address.street }}</span>
+        <span>{{ site.data.contact.general.address.postal }}</span>
+        <a href="mailto:{{site.data.contact.general.address.email}}">{{ site.data.contact.general.address.email }}</a>
+        <span class="info">{{ site.data.contact.general.address.extra.one }}</span>
+      </div>
+      <div class="contact__contact">
+        <h3 class="title">{{ site.data.contact.general.telephone.title }}</h3>
+        <div class="contact__telephone">
+          <div class="contact__person">
+            <span>{{ site.data.contact.general.telephone.contacts[0].name }}</span>
+            <span>{{ site.data.contact.general.telephone.contacts[0].number }}</span>
+          </div>
+          <span class="contact__ampersand">&</span>
+          <div class="contact__person">
+            <span>{{ site.data.contact.general.telephone.contacts[1].name }}</span>
+            <span>{{ site.data.contact.general.telephone.contacts[1].number }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{footer.content({})}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{# <div class="cover">
   <img src="images/wave.svg" class="bg"/>
   <div class="container grid-container">
-    {{header.content({})}}
+
 
     <div class="content">
       <div class="intro-box">
@@ -50,5 +208,5 @@
     {{footer.content({})}}
 
   </div>
-  </div>
+  </div> #}
 {% endblock %}

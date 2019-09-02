@@ -1,0 +1,24 @@
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _class = spec.class or '' %}
+{% set _title = spec.title or '' %}
+{% set _text = spec.text or '' %}
+{% set _icon_path = spec.icon_path or '' %}
+
+
+<div class="info-block {{_class}}">
+  <div class="info-block__illustration">
+  <div class="info-block__icon">
+    <svg class="inline-svg" src="{{ _icon_path }}"></svg>
+  </div>
+
+  </div>
+  <div class="info-block__content">
+    <h3 class="info-block__title">{{ _title }}</h3>
+    <p>
+      {{ _text }}
+    </p>
+  </div>
+</div>
+{% endmacro %}

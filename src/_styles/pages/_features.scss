@@ -1,0 +1,57 @@
+
+$card-gutters: (
+  small: 10px,
+  medium: 25px,
+  large: 40px
+);
+
+$features-spacings: (
+  small: 3rem 1rem,
+  medium: 3rem 1rem,
+  large: 6.25rem 3.125rem
+);
+
+#features {
+  .section {
+    background-color: $neutral;
+    padding: map-get($features-spacings, 'small')
+  }
+
+  .features {
+    @include xy-grid;
+    @include xy-gutters($gutters: $card-gutters, $gutter-type: margin, $negative: true);
+  }
+  .cell {
+    // @include xy-cell(100%, $gutter-output: true, $gutters: map-get($card-gutters, small));
+    @include xy-cell(100%, $gutter-output: true, $gutters: $card-gutters, $breakpoint: small);
+    margin-bottom: $spacer * 4;
+  }
+
+
+
+
+  @include breakpoint(medium) {
+    .section {
+      padding: map-get($features-spacings, 'medium');
+    }
+  }
+
+  @include breakpoint(large) {
+    .section {
+      padding: map-get($features-spacings, 'large');
+    }
+    .features {
+      .cell {
+        min-height: 30.3125rem;
+        @include xy-cell(1/3, $gutter-output: true, $gutters: $card-gutters);
+      }
+    }
+  }
+
+  /** TEMP **/
+  @include breakpoint (1332px down) {
+    .feature-card__title {
+      min-height: $spacer * 9;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _class = spec.class or '' %}
+{% set _title = spec.title or '' %}
+{% set _text = spec.text or '' %}
+{% set _icon_path = spec.icon_path or '' %}
+{% set _special = spec.special or false %}
+{% set _type = spec.type or '' %}
+
+<div id="{{_type}}" class="feature-card {{_class}} {{ 'feature-card--special' if _special }}">
+  <div class="feature-card__icon">
+    <svg class="inline-svg" src="{{ _icon_path }}"></svg>
+  </div>
+  {# <div class="feature-card__icon">{% include "images/handdrawn-icons/handdrawn-speech.svg" %}</div> #}
+  <h3 class="feature-card__title">{{ _title }}</h3>
+  <div class="feature-card__divider"></div>
+  <p class="feature-card__text">{{ _text }}</p>
+</div>
+{% endmacro %}

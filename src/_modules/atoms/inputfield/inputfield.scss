@@ -1,0 +1,72 @@
+// inputfield styles
+
+
+$component: '.inputfield';
+$input-padding: $spacer;
+
+
+#{$component} {
+  width: 100%;
+  position: relative;
+
+  &__label {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    cursor: text;
+  }
+
+  &__input {
+    width: 100%;
+    padding: $input-padding;
+    padding-left: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $dark;
+
+    // &:focus ~ #{$component}__label,
+    // &:not(:empty) ~ #{$component}__label {
+    //   opacity: 0;
+    //   transform: translateY(-60%);
+    // }
+
+    &:not(:placeholder-shown) ~ #{$component}__label,
+    &:focus ~ #{$component}__label {
+      opacity: 0;
+      transform: translateY(-70%);
+    }
+
+    /** Not used, just needed for the usage of :placeholder-shown selector */
+    &::placeholder {
+      color: transparent;
+    }
+
+    &.is-invalid-input {
+      // color: #ff747a;
+      border-color: #ff747a;
+
+      & ~ #{$component}__label {
+        color: #ff747a;
+      }
+    }
+  }
+
+
+  &--textarea {
+    #{$component}__label {
+      top: $input-padding;
+      transform: translateY(0%);
+    }
+
+    #{$component}__input {
+      min-height: $spacer * 10;
+      &:not(:placeholder-shown) ~ #{$component}__label,
+      &:focus ~ #{$component}__label {
+        transform: translateY(-10%);
+      }
+    }
+  }
+}

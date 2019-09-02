@@ -1,0 +1,21 @@
+[
+  {
+    "name": "problematieken",
+    "href": "features"
+  },{
+    "name": "Aanmelding",
+    "href": "steps"
+  },
+  {
+    "name": "Tarieven",
+    "href": "pricing"
+  },
+  {
+    "name": "Ons team",
+    "href": "team"
+  },
+  {
+    "name": "Contact",
+    "href": "contact"
+  }
+  ]

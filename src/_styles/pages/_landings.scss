@@ -1,0 +1,137 @@
+$width-intro-large: 50%;
+$width-intro-medium: 75%;
+
+$width-illustration-buffer-large: 14%;
+$width-illustration-large: $width-intro-large + $width-illustration-buffer-large;
+
+$width-illustration-buffer-medium: 14%;
+$width-illustration-medium: $width-intro-medium + $width-illustration-buffer-medium;
+
+
+$illu-block-height: 4.75rem;
+$illustration-height-normal: 39.0625rem;
+
+
+#landing {
+  .intro {
+
+    padding: 1.875rem 2.1875rem;
+    background-color: $brand-02;
+    @include headings {
+      & + p {
+        margin-top: $spacer * 4;
+      }
+    }
+
+    .cta {
+      margin-top: $spacer * 10;
+    }
+
+  }
+  .illustration {
+
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    img {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      height: $illu-block-height;
+      bottom: -$illu-block-height / 2;
+      right: -3.125rem;
+      width: 22.5rem;
+      background-color: $neutral;
+      z-index: -1;
+    }
+  }
+
+  .intro {
+    width: 100%;
+  }
+
+  .intro, .illustration {
+    flex-shrink: 0;
+    position: relative;
+  }
+
+
+
+
+  @include breakpoint(small) {
+    .illustration {
+      height: 13.75rem;
+      width: 100%;
+    }
+  }
+
+
+
+  @include breakpoint(medium) {
+    margin-top: $spacer * 4;
+
+    .section {
+
+      display: flex;
+      flex-direction: row;
+      // min-height: 80vh;
+
+    }
+    .cover {
+      @include xy-grid(horizontal, false);
+      width: 100%;
+      align-items: center;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: xy-cell-size($width-intro-medium);
+      order: 1;
+      padding: 3.375rem 3.9375rem 4.8125rem;
+    }
+
+    .illustration {
+      height: $illustration-height-normal;
+      order: 2;
+      width: xy-cell-size($width-illustration-medium);
+      margin-left: -64%;
+    }
+
+  }
+
+  @include breakpoint(large) {
+    .section {
+
+    }
+    .intro {
+      width: xy-cell-size($width-intro-large);
+    }
+
+    .illustration {
+      width: xy-cell-size($width-illustration-large);
+      margin-left: -$width-illustration-buffer-large;
+    }
+  }
+
+  @include breakpoint(xxlarge) {
+    margin-top: $spacer * 5;
+    .section {
+
+      // min-height: 50vh;
+    }
+  }
+}

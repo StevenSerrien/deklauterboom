@@ -4,7 +4,13 @@
 {% set _class = spec.class or '' %}
 
 <div class="footer {{_class}}">
+  <div class="footer__inner">
+    <p>© De Klauterboom</p>
+    <div class="footer__illustration">
+      <svg class="inline-svg" src="images/handdrawn-icons/handdrawn-paperfly.svg"></svg>
+    </div>
+  </div>
+
   {# <p>Made with <span class="heart">❤</span> by Steven</p> #}
-  <p><span class="heart">💪</span> Website onder constructie  </p>
 </div>
 {% endmacro %}

@@ -1,0 +1,240 @@
+// table styles
+$breakpoint: 750px;
+
+$component: '.table';
+$cell: $component + '__cell';
+$row: $component + '__row';
+
+
+// #{$component} {
+//   &__header {
+//     #{$row} {
+
+//     }
+//     #{$cell} {
+
+//     }
+//   }
+
+//   &__body {
+//     #{$row} {
+
+//     }
+//     #{$cell} {
+
+//     }
+//   }
+
+//   &__cell {
+
+//   }
+
+//   &__row {
+
+//   }
+// }
+
+
+/* Apply styles
+================================== */
+.Rtable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 3em 0;
+  padding: 0;
+
+  .Rtable-row {
+    width: 100%;
+    display: flex;
+
+    .Rtable-cell {
+      display: flex;
+      box-sizing: border-box;
+      flex-grow: 1;
+
+      padding: 1.875rem 1.875rem;
+      overflow: hidden; // Or flex might break
+      list-style: none;
+      align-items: center;
+
+      &:not(:first-child) {
+        justify-content: center;
+      }
+
+      &.column-heading {
+        // background-color: $heading-color;
+        padding: 1em;
+      }
+
+      .Rtable-cell--heading {
+        display: none;
+      }
+
+      .Rtable-cell--content {
+        a {
+          font-size: 2em;
+          color: #333;
+        }
+
+        .webinar-date {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive
+==================================== */
+@media all and (max-width: $breakpoint) {
+  .is-striped {
+    background-color: white;
+  }
+
+  .Rtable--collapse  {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    box-shadow: none;
+
+    .Rtable-row {
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2em;
+      box-shadow: 0px 9px 30px rgba(200, 200, 200, 0.30);
+      border-radius: 5px;
+      overflow: hidden;
+
+      .Rtable-cell {
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+
+        .Rtable-cell--heading {
+          display: inline-block;
+          flex: 1;
+          max-width: 120px;
+          min-width: 120px;
+          @include font-weight(book);
+          border-right: 2px solid $neutral;
+          margin-right: 1em;
+          text-align: left;
+        }
+
+        .Rtable-cell--content {
+          flex: 2;
+          // padding-left: 1em;
+        }
+      }
+    }
+
+    .topic-cell {
+      color: white;
+      font-weight: 700;
+      order: -1;
+
+      .Rtable-cell--content {
+        padding-left: 0 !important;
+      }
+    }
+
+    .Rtable-row--head {
+      display: none;
+    }
+  }
+}
+
+// Non-Flex modernizer fallback
+.no-flexbox .Rtable {
+  display: block;
+
+  &.Rtable-cell {
+    width: 100%;
+  }
+}
+
+
+.type-cell {
+  width: 30%;
+}
+
+.Rtable-cell .sub {
+  display: block;
+  @include font-weight(light);
+  color: $neutral-darker;
+}
+
+[class*="col_"] {
+  width: 23.33%;
+  text-align: center;
+
+  .Rtable-cell--content {
+    margin: auto;
+  }
+}
+
+.body {
+  [class*="col_"] {
+    background-color: #FCFCFC;
+  }
+
+}
+
+
+
+
+.column-heading:not(:first-child) span {
+  position: relative;
+  font-family: $font-family-display;
+  &:after {
+    content:  '';
+    height: 4px;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    background-color: $brand-01;
+  }
+}
+
+.Rtable-row:not(:first-child)  {
+  margin-top: $spacer * 3;
+}
+
+@include breakpoint(medium) {
+  .Rtable-row:not([class*='--head'])
+  .type-cell {
+    border-right: 5px solid $brand-01;
+  }
+}
+
+
+@include breakpoint(small down) {
+  .Rtable-row:not([class*='--head'])
+  .type-cell {
+    border-bottom: 5px solid $brand-01;
+  }
+
+  .Rtable-row .Rtable-cell {
+    padding-bottom: 30px !important;
+    &:last-child {
+
+    }
+  }
+
+  .Rtable-row {
+    background-color: red;
+    .Rtable-cell {
+
+      &:first-child {
+
+      }
+      &:last-child {
+        padding-bottom: 30px;
+      }
+    }
+  }
+}

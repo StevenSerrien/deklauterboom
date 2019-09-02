@@ -5,31 +5,78 @@
  *
  */
 
+/** Futura PT **/
+$default-type-weights:
+                    (light 300)
+                    (book 400)
+                    (medium 500)
+                    (semi-bold 600)
+                    (bold 700);
+
+/** Gill Sans Nova **/
+$only-secondary-type-weights: ultra-light 200;
+
+/** Merged Typeface Weights **/
+$all-type-weights: append($default-type-weights, $only-secondary-type-weights, space);
+
+@mixin font-weight($weight-name) {
+  font-weight: find-value($all-type-weights, $weight-name);
+}
+
 @mixin display-1 {
   font-family: $font-family-display;
   font-size: 3.4375rem;
   line-height: 4.5625rem;
-  font-weight: 500;
+  @include font-weight(book);
 
   @include breakpoint(small down) {
     font-size: 2.375rem;
+    line-height: 2.375rem;
   }
 }
 
-
+$heading-1-size: 2.25rem;
 
 @mixin heading-1 {
-
-  font-size: 1.5rem;
-  line-height: 1.75rem;
+  font-family: $font-family-display;
+  font-size: $heading-1-size;
+  line-height: normal;
   @include breakpoint(small down) {
-    font-size: calc(1.5rem/1.2);
+    font-size: $heading-1-size * .9;
   }
 }
+
+@mixin heading-2() {
+  font-family: $font-family-display;
+  font-size: 1.75rem;
+  line-height: normal;
+}
+
+@mixin heading-3 {
+  font-size: 1.5rem;
+  @include font-weight(book);
+}
+
+@mixin heading-4 {
+  font-size: 1.25rem;
+  @include font-weight(book);
+}
+
+@include headings {
+  font-family: $font-family-display;
+}
+
 
 @mixin body {
   font-size: 1rem;
   line-height: 1.3rem;
+  font-weight: inherit;
+}
+
+@mixin button-type {
+  @include body;
+  @include font-weight(semi-bold);
+  font-family: $font-family-display;
 }
 
 @mixin body-emphasis {
@@ -41,12 +88,31 @@
   color: $brand-01;
 }
 
-h1 {
+h1, .h1 {
   @include heading-1;
 }
 
 .display-1 {
   @include display-1;
+}
+
+/** Weight Modifiers **/
+
+@each $weight in $all-type-weights {
+    $class-name: nth($weight, 1);
+    $font-weight: nth($weight, 2);
+
+      .#{$class-name} {
+        font-weight: $font-weight;
+      }
+}
+
+
+
+
+
+@mixin weight($weight) {
+
 }
 
 

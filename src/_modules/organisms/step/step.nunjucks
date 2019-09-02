@@ -1,0 +1,33 @@
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _class = spec.class or '' %}
+{% set _number = spec.number or '' %}
+{% set _content = spec.content or '' %}
+{% set _title = spec.title or '' %}
+
+<div class="step {{_class}}">
+  <div class="step__badge-wrapper">
+    <div class="step__badge">
+      <span class="step__number">{{ _number }}</span>
+    </div>
+  </div>
+  <div class="step__inner">
+    <h3 class="step__title">{{ _title }}</h3>
+    <div class="step__divider"></div>
+
+    {% if _content|length %}
+      {% for textblock in _content %}
+       <div class="step__text-block">
+        {% if 'subtitle' in textblock %}
+          <span class="step__subtitle">{{ textblock.subtitle }}</span>
+        {% endif %}
+
+        <p class="step__text">{{ textblock.paragraph }}</p>
+       </div>
+      {% endfor %}
+
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

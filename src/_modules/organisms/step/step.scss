@@ -1,0 +1,133 @@
+// step styles
+
+
+$component: '.step';
+
+
+$badge-dimension: 75px;
+$badge-buffer: 60px;
+
+$badge-map: (
+  "small": (
+    "dimensions": 55px,
+    "buffer": 40px,
+  ),
+  "medium": (
+    "dimensions": 75px,
+    "buffer": 60px
+  )
+);
+
+$badge-wrapper-dimension-small: map-deep-get($badge-map, "small", "dimensions") + map-deep-get($badge-map, "small", "buffer");
+$badge-wrapper-dimension-medium: map-deep-get($badge-map, "medium", "dimensions") + map-deep-get($badge-map, "medium", "buffer");
+
+
+$stroke-width: 10px;
+
+#{$component} {
+  position: relative;
+  padding-left: ($badge-wrapper-dimension-small / 3) - $stroke-width;
+  padding-top: ($badge-wrapper-dimension-small / 3) - $stroke-width;
+
+  &__badge-wrapper {
+    width: map-deep-get($badge-map, "small", "dimensions") + (map-deep-get($badge-map, "small", "buffer") / 2);
+    height: map-deep-get($badge-map, "small", "dimensions") + (map-deep-get($badge-map, "small", "buffer") / 2);
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__badge {
+    width: map-deep-get($badge-map, "small", "dimensions");
+    height: map-deep-get($badge-map, "small", "dimensions");
+    position: absolute;
+    // transform: translate(-50%, -50%);
+    // left: 50%;
+    // top: 50%;
+    background: $brand-02;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &__inner {
+    border: $stroke-width solid #F7F7F7;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__number {
+    @include heading-1;
+    @include font-weight(semi-bold);
+    line-height: map-deep-get($badge-map, "small", "dimensions");
+  }
+
+  &__title {
+    @include heading-3;
+    @include font-weight(medium);
+    align-self: flex-end;
+  }
+
+  &__divider {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    &::before, &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $brand-02-dark;
+    }
+
+    &:before {
+      margin-right: 10px;
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-size: 1.1em;
+    margin-bottom: $spacer * 2.5;
+  }
+
+  &__text-block {
+    & + #{$component}__text-block {
+      margin-top: $spacer * 3;
+    }
+
+    em {
+      @include font-weight(semi-bold);
+    }
+  }
+
+  &__text {
+    @include font-weight(book);
+  }
+
+  @include breakpoint(medium) {
+    &__badge-wrapper {
+      width: map-deep-get($badge-map, "medium", "dimensions") + (map-deep-get($badge-map, "medium", "buffer") / 2);
+      height: map-deep-get($badge-map, "medium", "dimensions") + (map-deep-get($badge-map, "medium", "buffer") / 2);
+    }
+
+    &__badge {
+      width: map-deep-get($badge-map, "medium", "dimensions");
+      height: map-deep-get($badge-map, "medium", "dimensions");
+    }
+
+    &__number {
+      line-height: map-deep-get($badge-map, "medium", "dimensions");
+    }
+
+    &__inner {
+      padding: 70px 60px;
+    }
+  }
+}

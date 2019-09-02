@@ -8,12 +8,21 @@ $breakpoints: (small: 0,
   xlarge: 1200px,
   xxlarge: 1440px);
 
-$global-width: 75rem; // 1200px
+$global-width: 87.5rem; // 1400px
+$grid-margin-gutters: (
+  small: 20px,
+  medium: 60px,
+);
+$grid-padding-gutters: $grid-margin-gutters;
+$grid-container-padding: $grid-padding-gutters;
+$grid-container-max: $global-width;
 
 $grid-row-width: $global-width;
 $grid-column-count: 12;
-$grid-column-gutter: (small: 20px,
-  medium: 30px,
+$grid-column-gutter: (
+  small: 20px,
+  medium: 65px,
+  large: 65px
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';
@@ -21,7 +30,7 @@ $block-grid-max: 8;
 
 $body-font-family: $font-family-global;
 $global-weight-normal: 500;
-$body-font-color: #000000;
+$body-font-color: $font-base-color;
 
 @import 'node_modules/foundation-sites/scss/global';
 @import 'node_modules/foundation-sites/scss/xy-grid/xy-grid';

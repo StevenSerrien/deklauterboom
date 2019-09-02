@@ -1,0 +1,71 @@
+{
+  "title": "Contacteer ons",
+  "subtitle": "Vul het formulier in om contact op te nemen!",
+  "contactform": {
+    "title": "Heb je een <em>vraag</em>?",
+    "fields": [
+      {
+        "id": "first_name",
+        "placeholder": "voornaam",
+        "type": "text",
+        "full": false
+      },
+      {
+        "id": "last_name",
+        "placeholder": "achternaam",
+        "type": "text",
+        "full": false
+      },
+      {
+        "id": "email",
+        "placeholder": "e-mail",
+        "type": "email",
+        "full": false
+      },
+      {
+        "id": "telephone",
+        "placeholder": "telefoonnr.",
+        "type": "text",
+        "full": false
+      },
+      {
+        "id": "message",
+        "placeholder": "Vertel ons kort waar we je mee kunnen helpen",
+        "type": "textarea",
+        "full": true
+      }
+    ],
+    "submit": "verzend mijn vraag",
+    "validation": {
+      "success": {
+        "title": "Bedankt voor uw bericht!",
+        "text": "Wij nemen zo snel mogelijk contact op met u."
+      }
+    }
+  },
+  "general": {
+    "address": {
+      "title": "<em>Waar</em> kan je ons vinden?",
+      "name": "De Klauterboom",
+      "street": "Prins Boudewijnlaan 82 bus 1",
+      "postal": "2610 Wilrijk",
+      "email": "info@deklauterboom.be",
+      "extra": {
+        "one": "Ter info: Vergeet uw parkeerschijf niet te plaatsen <br/>indien u met de auto komt."
+      }
+    },
+    "telephone": {
+      "title": "Liever <em>telefonisch</em> contact?",
+      "contacts": [
+        {
+          "name": "Sofie Declau",
+          "number": "(+32)494 93 63 36"
+        },
+        {
+          "name": "Silke Auwers",
+          "number": "(+32)494 93 63 36"
+        }
+      ]
+    }
+  }
+}
