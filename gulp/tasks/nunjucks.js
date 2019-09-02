@@ -8,8 +8,6 @@ import yaml from 'js-yaml';
 import gulp from 'gulp';
 import { plugins, args, config, taskTarget, browserSync } from '../utils';
 
-const embedSvg = require('gulp-embed-svg');
-
 let dirs = config.directories;
 let dest = path.join(taskTarget);
 let dataPath = path.join(dirs.source, dirs.data);
@@ -84,13 +82,6 @@ gulp.task('nunjucks', () => {
           removeRedundantAttributes: true
         })
       )
-      .pipe(embedSvg(
-        {
-          root: dest,
-          createSpritesheet: true,
-          selectors: '.inline-svg'
-        }
-      ))
       .pipe(gulp.dest(dest))
       .on('end', browserSync.reload)
   );

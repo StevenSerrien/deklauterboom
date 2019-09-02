@@ -5,7 +5,7 @@
 
 import $ from "jquery";
 import Link from "../_modules/link/link";
-import Toastify from 'toastify-js';
+// import Toastify from 'toastify-js';
 
 
 import { Foundation } from 'foundation-sites/js/foundation.core';

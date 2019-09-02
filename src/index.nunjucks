@@ -28,7 +28,7 @@
         De Klauterboom biedt logopedisch onderzoek en behandeling voor kinderen en jongvolwassenen.
         </p>
 
-        {{link.content({href: '#contact', type: 'button', class:'cta page-scroll', text: 'maak een afspraak'})}}
+        {{link.content({href: '#contact', type: 'button', class:'cta page-scroll', text: 'contacteer ons'})}}
       </div>
     </div>
   </div>

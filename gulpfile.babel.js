@@ -15,20 +15,21 @@ glob.sync('./gulp/tasks/**/*.js').filter(function(file) {
 // Build production-ready code
 gulp.task('build', gulp.series(
   gulp.parallel(
-    'lqip',
+    // 'lqip',
     'copy',
     'imagemin',
     'nunjucks',
     'sass',
     'browserify'
   ),
+  'embedsvg',
   'rev'
 ));
 
 // Server tasks with watch
 gulp.task('serve', gulp.series(
   gulp.parallel(
-    'lqip',
+    // 'lqip',
     'imagemin',
     'copy',
     'nunjucks',
