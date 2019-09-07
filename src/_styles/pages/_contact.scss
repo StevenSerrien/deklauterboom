@@ -15,6 +15,7 @@ $form-gutters: (
     span.info {
       color: $neutral-dark;
       font-size: .9rem;
+      margin-top: $spacer;
     }
     @include xy-grid;
     &__form,
