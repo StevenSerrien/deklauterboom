@@ -16,9 +16,10 @@ $card-gutters: (
         margin-top: $spacer * 10;
       }
       &:last-child {
-        .person {
-          margin-left: auto;
-        }
+        justify-content: flex-end;
+        // .person {
+        //   margin-left: auto;
+        // }
       }
     }
   }

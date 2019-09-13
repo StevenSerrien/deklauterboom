@@ -17,6 +17,10 @@ $illustration-height-normal: 39.0625rem;
 
     padding: 1.875rem 2.1875rem;
     background-color: $brand-02;
+
+    & > * {
+      max-width: 100%;
+    }
     @include headings {
       & + p {
         margin-top: $spacer * 4;
