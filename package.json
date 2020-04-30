@@ -7,7 +7,7 @@
     "gulp-embed-svg": "^1.1.5",
     "gulp-scale-images": "^1.2.1",
     "imagemin-mozjpeg": "^8.0.0",
-    "jquery": "~3.4.1",
+    "jquery": "~3.5.0",
     "normalize.css": "~8.0.1",
     "toastify-js": "^1.6.1"
   },
