@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     {{schema.content({})}}
     <link rel="stylesheet" href="{{baseUrl}}styles/main.css"/>
-    <link rel="stylesheet" href="https://use.typekit.net/cup8hyj.css">
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/cup8hyj.css">  Removed TypeKit fonts --> 
     <link rel="canonical" href="https://www.deklauterboom.be/">
     {% block stylesheets %}{% endblock %}
 
