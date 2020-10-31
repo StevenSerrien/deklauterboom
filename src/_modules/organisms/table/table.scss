@@ -170,9 +170,7 @@ $row: $component + '__row';
   width: 23.33%;
   text-align: center;
 
-  .Rtable-cell--content {
-    margin: auto;
-  }
+
 }
 
 .body {
@@ -226,7 +224,7 @@ $row: $component + '__row';
   }
 
   .Rtable-row {
-    background-color: red;
+    background-color: $brand-01;
     .Rtable-cell {
 
       &:first-child {

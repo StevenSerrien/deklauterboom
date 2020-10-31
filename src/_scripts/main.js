@@ -5,7 +5,7 @@
 
 import $ from "jquery";
 import Link from "../_modules/link/link";
-// import Toastify from 'toastify-js';
+// import { Toastify } from 'toastify-js';
 
 
 import { Foundation } from 'foundation-sites/js/foundation.core';
@@ -42,6 +42,21 @@ $(() => {
 
 
   var mobileHamburger = document.querySelector('#hamburger');
+
+  $('input, textarea').each(function() {
+    if (! $(this).val()) {
+      $(this).addClass("empty");
+    }
+  })
+
+  $("input, textarea").keyup(function() {
+    if ($(this).val() == "") {
+      $(this).addClass("empty");
+    } else {
+      $(this).removeClass("empty");
+    }
+  });
+
 
 
   $(document)
@@ -156,6 +171,7 @@ $(() => {
           form.reset();
           submitButton.removeClass(loadingClass);
           showToast('<span class="title">' + successTitle + '</span> <br/ > <span class="text">' + successText + '</span>', 'success');
+          $('input, textarea').addClass('empty');
         } else if (text && text.message == "failure_email") {
           alert("Er ging iets mis. Bericht niet verstuurd.");
         }

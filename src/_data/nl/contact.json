@@ -47,7 +47,7 @@
     "address": {
       "title": "<em>Waar</em> kan je ons vinden?",
       "name": "De Klauterboom",
-      "street": "Prins Boudewijnlaan 82 bus 1",
+      "street": "Prins Boudewijnlaan 82 bus 1 (verdieping 1)",
       "postal": "2610 Wilrijk",
       "email": "info@deklauterboom.be",
       "extra": {
@@ -59,11 +59,11 @@
       "contacts": [
         {
           "name": "Sofie Declau",
-          "number": "(+32)494 93 63 36"
+          "number": "(+32) 494 93 63 36"
         },
         {
           "name": "Silke Auwers",
-          "number": "(+32)494 93 63 36"
+          "number": "(+32) 497 60 32 06"
         }
       ]
     }

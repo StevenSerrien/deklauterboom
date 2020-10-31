@@ -36,7 +36,7 @@
 
 
 <section id="features">
-  {{section_title.content({text: 'Wat behandelen wij'})}}
+  {{section_title.content({text: 'Wat behandelen wij?'})}}
   <div class="section">
   <div class="features">
     {% for feature in site.data.features %}

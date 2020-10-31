@@ -34,6 +34,17 @@ $input-padding: $spacer;
     // }
 
     &:not(:placeholder-shown) ~ #{$component}__label,
+    &:not(.empty) ~ #{$component}__label,
+    &:focus ~ #{$component}__label {
+      opacity: 0;
+      transform: translateY(-70%);
+    }
+
+    &:not(.empty) + .inputfield__label {
+      opacity: 0;
+      transform: translateY(-70%);
+    }
+
     &:focus ~ #{$component}__label {
       opacity: 0;
       transform: translateY(-70%);
@@ -43,6 +54,13 @@ $input-padding: $spacer;
     &::placeholder {
       color: transparent;
     }
+
+    &::-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+       color: transparent;
+    }
+
+    &::-ms-clear { display: none; }
 
     &.is-invalid-input {
       // color: #ff747a;

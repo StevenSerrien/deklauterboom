@@ -32,7 +32,7 @@ $stroke-width: 10px;
   &__badge-wrapper {
     width: map-deep-get($badge-map, "small", "dimensions") + (map-deep-get($badge-map, "small", "buffer") / 2);
     height: map-deep-get($badge-map, "small", "dimensions") + (map-deep-get($badge-map, "small", "buffer") / 2);
-    background-color: white;
+    background-color: $body-background;
     position: absolute;
     left: 0;
     top: 0;
