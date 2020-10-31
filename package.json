@@ -97,7 +97,8 @@
       "images": "_images",
       "styles": "_styles",
       "scripts": "_scripts",
-      "data": "_data/nl"
+      "data": "_data/nl",
+      "fonts": "_fonts"
     },
     "entries": {
       "js": "main**.js",
