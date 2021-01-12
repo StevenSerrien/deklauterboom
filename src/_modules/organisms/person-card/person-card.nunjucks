@@ -7,6 +7,7 @@
 {% set _image_lowres = spec.image_lowres or '' %}
 {% set _image = spec.image or '' %}
 {% set _number = spec.number or '' %}
+{% set _telephone = spec.telephone or '' %}
 
 
 <div class="person {{_class}} person--{{_number}}">
@@ -16,6 +17,7 @@
         <div class="person__info">
           <span class="person__info-name">{{ _name }}</span>
           <span class="person__info-title">{{ _title }}</span>
+          <span class="person__info-telephone">{{ _telephone }}</span>
         </div>
       </div>
 </div>

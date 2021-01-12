@@ -65,7 +65,7 @@ $form-gutters: (
 
       .contact__person {
         span:last-of-type {
-          color: $neutral-dark;
+          margin-top: 10px;
         }
       }
 
@@ -140,9 +140,13 @@ $form-gutters: (
   .title {
     @include heading-2;
     @include font-weight(book);
-    margin-bottom: $spacer * 6;
+    margin-top: $spacer * 3;
     em {
       @include font-weight(bold);
+    } 
+    & + .telephone {
+      color: $neutral-dark;
+      margin-bottom: $spacer * 6;
     }
   }
 

@@ -60,11 +60,16 @@ $component: '.person';
       transition: transform 0.2s 0.3s ease-out, opacity 0.2s 0.3s ease-out;
     }
 
-    &-title, &-name {
+    &-telephone {
+      font-size: .8em;
+      color: $neutral-dark;
+      transition: transform 0.2s 0.3s ease-out, opacity 0.2s 0.4s ease-out;
+    }
+
+    &-title, &-name, &-telephone {
       transform: translateY(10px);
       opacity: 0;
     }
-
   }
 
   &:hover {
@@ -72,7 +77,7 @@ $component: '.person';
       &__info {
         transform: scale(1);
         opacity: 1;
-        &-title, &-name {
+        &-title, &-name, &-telephone {
           transform: translateY(0px);
           opacity: 1;
         }
