@@ -74,7 +74,7 @@
 
   {% for person in site.data.team.persons%}
   <div class="cell">
-    {{ personcard.content({name: person.name, title: person.function, image: person.photo_url, number: loop.index})}}
+    {{ personcard.content({name: person.name, title: person.function, image: person.photo_url, number: loop.index, telephone: person.telephone })}}
   </div>
   {% endfor %}
   </div>
@@ -108,15 +108,16 @@
       </div>
       <div class="contact__contact">
         <h3 class="title">{{ site.data.contact.general.telephone.title }}</h3>
+        <span class="telephone">Bel ons gerust op: {{ site.data.contact.general.telephone.number }}</span>
         <div class="contact__telephone">
           <div class="contact__person">
             <span>{{ site.data.contact.general.telephone.contacts[0].name }}</span>
-            <span>{{ site.data.contact.general.telephone.contacts[0].number }}</span>
+            <span>{{ site.data.contact.general.telephone.contacts[2].name }}</span>
           </div>
           <span class="contact__ampersand">&</span>
           <div class="contact__person">
             <span>{{ site.data.contact.general.telephone.contacts[1].name }}</span>
-            <span>{{ site.data.contact.general.telephone.contacts[1].number }}</span>
+            <span>{{ site.data.contact.general.telephone.contacts[3].name }}</span>
           </div>
         </div>
 

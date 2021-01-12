@@ -25,44 +25,44 @@
           "title": "Aanvangsbilan",
           "sublabel": "30 minuten"
         },
-        "col_1": "32,83",
-        "col_2": "25,33",
-        "col_3": "29,83"
+        "col_1": "33,16",
+        "col_2": "25,66",
+        "col_3": "30,16"
       },
       {
         "type": {
           "title": "Therapie op praktijk",
           "sublabel": "30 minuten"
         },
-        "col_1": "28,04",
-        "col_2": "22,54",
-        "col_3": "26,04"
+        "col_1": "28,33",
+        "col_2": "22,83",
+        "col_3": "26,33"
       },
       {
         "type": {
           "title": "Therapie op school",
           "sublabel": "30 minuten"
         },
-        "col_1": "27,09",
-        "col_2": "21,09",
-        "col_3": "25,09"
+        "col_1": "27,36",
+        "col_2": "21,36",
+        "col_3": "25,36"
       },
       {
         "type": {
           "title": "Therapie op praktijk",
           "sublabel": "60 minuten"
         },
-        "col_1": "56,32",
-        "col_2": "45,32",
-        "col_3": "51,82"
+        "col_1": "56,89",
+        "col_2": "45,89",
+        "col_3": "52,39"
       },
       {
         "type": {
           "title": "Evolutiebilan"
         },
-        "col_1": "46,80",
-        "col_2": "35,80",
-        "col_3": "42,30"
+        "col_1": "47,27",
+        "col_2": "36,27",
+        "col_3": "42,77"
       }
     ],
     "currency": "€"
