@@ -77,6 +77,18 @@ $form-gutters: (
 
     }
 
+    &__contact {
+      .title {
+        margin-top: $spacer * 3;
+        margin-bottom: 0;
+        
+        & + .telephone {
+          color: $neutral-dark;
+          margin-bottom: $spacer * 6;
+        }
+      }
+    }
+
 
     .paper-plane {
       position: absolute;
@@ -140,14 +152,10 @@ $form-gutters: (
   .title {
     @include heading-2;
     @include font-weight(book);
-    margin-top: $spacer * 3;
+    margin-bottom: $spacer * 6;
     em {
       @include font-weight(bold);
     } 
-    & + .telephone {
-      color: $neutral-dark;
-      margin-bottom: $spacer * 6;
-    }
   }
 
 
