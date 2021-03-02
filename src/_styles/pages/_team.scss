@@ -39,6 +39,38 @@ $card-gutters: (
         &:nth-child(even) {
           margin-top: 100px;
         }
+
+        &.full {
+          position: relative;
+          
+          &::before {
+            width: 100%;
+            height: 40%;
+            z-index: -1;
+            background: $brand-02;
+            content: '';
+            position: absolute;
+            right: 20%;
+            top: -10%;
+      
+            @include breakpoint(small down) {
+              right: -20%;
+              top: -10%;
+            }
+          }
+
+          &::after {
+            width: 25px;
+            height: 90%;
+            top: 20%;
+            content: '';
+            position: absolute;
+            background: $neutral;
+            right: -(25px / 2);
+          }
+          margin-top: $spacer * 30;
+          @include xy-cell(100%, $gutter-output: true, $gutters: $card-gutters);
+        }
       }
     }
   }

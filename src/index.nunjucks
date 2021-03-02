@@ -77,6 +77,9 @@
     {{ personcard.content({name: person.name, title: person.function, image: person.photo_url, number: loop.index, telephone: person.telephone })}}
   </div>
   {% endfor %}
+  <div class="cell full">
+      <img src="images/group-min.jpg" alt="Photo group">
+  </div>
   </div>
 </section>
 
