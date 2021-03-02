@@ -8,6 +8,10 @@ $component: '.person';
 
   position: relative;
 
+  @include breakpoint(small down) {
+    margin: 0 auto;
+  }
+
   &__img {
     position: relative;
     width: 100%;
@@ -123,6 +127,36 @@ $component: '.person';
         left: -20%;
         bottom: -10%;
       }
+    }
+  }
+
+  &--3 {
+    &::before {
+      width: 100%;
+      height: 40%;
+      z-index: -1;
+      background: $neutral;
+      content: '';
+      position: absolute;
+      right: 20%;
+      top: -10%;
+
+      @include breakpoint(small down) {
+        right: -20%;
+        top: -10%;
+      }
+    }
+  }
+
+  &--4 {
+    &::before {
+      width: 25px;
+      height: 100%;
+      top: 5%;
+      content: '';
+      position: absolute;
+      background: $brand-02;
+      left: -(25px / 2);
     }
   }
 }
