@@ -5,15 +5,25 @@
       "name": "Sofie Declau",
       "function": "logopediste",
       "photo_url_lowres": "images/team/sofie-lqip.jpg",
-      "photo_url": "images/headshots/DSC_0283.jpg", 
+      "photo_url": "images/headshots/silke-1.jpg", 
       "telephone": "(+32) 494 93 63 36"
     },
     {
       "name": "Silke Auwers",
       "function": "logopediste",
       "photo_url_lowres": "images/headshots/DSC_0255.jpg",
-      "photo_url": "images/headshots/DSC_0254.jpg",
+      "photo_url": "images/headshots/sofie-1.jpg",
       "telephone": "(+32) 497 60 32 06"
+    },
+    {
+      "name": "Lien Pilate",
+      "function": "logopediste",
+      "photo_url": "images/headshots/lien.jpg"
+    },
+    {
+      "name": "Lotte Vandenbempt",
+      "function": "logopediste",
+      "photo_url": "images/headshots/lotte-2.jpg"
     }
   ]
 }
