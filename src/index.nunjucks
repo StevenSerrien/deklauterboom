@@ -78,7 +78,9 @@
   </div>
   {% endfor %}
   <div class="cell full">
-      <img src="images/group-min.jpg" alt="Photo group">
+      <div>
+        <img src="images/group-min.jpg" alt="Photo group">
+      </div>
   </div>
   </div>
 </section>
