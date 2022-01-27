@@ -34,6 +34,7 @@ $component: '.person';
     position: absolute;
     top: 0;
     left: 0;
+    padding: 40px;
     width: calc(100% - (20px * 2));
     height: calc(100% - (20px * 2));
     background-color: white;
@@ -64,16 +65,33 @@ $component: '.person';
       transition: transform 0.2s 0.3s ease-out, opacity 0.2s 0.3s ease-out;
     }
 
-    &-telephone {
+    &-additional-rule {
+      margin-bottom: 10px;
+    }
+
+    &-additional {
+      text-align: center;
+    }
+
+    &-telephone, &-additional, &-dots {
       font-size: .8em;
       color: $neutral-dark;
       transition: transform 0.2s 0.3s ease-out, opacity 0.2s 0.4s ease-out;
     }
 
-    &-title, &-name, &-telephone {
+    &-title, &-name, &-telephone, &-additional, &-dots {
       transform: translateY(10px);
       opacity: 0;
     }
+  }
+
+  .additional-title {
+    margin-top: 50px;
+  }
+
+  .person__info-dots {
+    color: rgb(190, 190, 190);
+    margin: 5px 0;
   }
 
   &:hover {
@@ -81,7 +99,7 @@ $component: '.person';
       &__info {
         transform: scale(1);
         opacity: 1;
-        &-title, &-name, &-telephone {
+        &-title, &-name, &-telephone, &-additional, &-dots {
           transform: translateY(0px);
           opacity: 1;
         }

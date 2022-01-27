@@ -8,6 +8,7 @@
 {% set _image = spec.image or '' %}
 {% set _number = spec.number or '' %}
 {% set _telephone = spec.telephone or '' %}
+{% set _specialisations = spec.specialisations or '' %}
 
 
 <div class="person {{_class}} person--{{_number}}">
@@ -18,7 +19,19 @@
           <span class="person__info-name">{{ _name }}</span>
           <span class="person__info-title">{{ _title }}</span>
           <span class="person__info-telephone">{{ _telephone }}</span>
+
+          <span class="person__info-title additional-title">bijkomende opleidingen</span>
+          <div class="person__info-dots">• • •</div>
+          <div class="person__info-additional">
+
+            {% for special in _specialisations%}
+            <div class="person__info-additional-rule">
+              <span>{{special.name}}{%if special.ref%} - {{special.ref}} {% endif %}</span>
+            </div>
+            {% endfor %}
+          </div>
         </div>
+
       </div>
 </div>
 {% endmacro %}

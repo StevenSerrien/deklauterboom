@@ -6,8 +6,17 @@
 <div class="footer {{_class}}">
   <div class="footer__inner">
     <p>© De Klauterboom</p>
-    <div class="footer__illustration">
-      <svg class="inline-svg" src="images/handdrawn-icons/handdrawn-paperfly.svg"></svg>
+
+    <div class="footer__right-side">
+      <a class="footer__social-icon" href="https://www.instagram.com/deklauterboom/" target="_blank">
+        <img src="images/footer/instagram.svg" alt="Instagram Icon">
+      </a>
+      <a class="footer__social-icon" href="https://www.facebook.com/DeKlauterboom" target="_blank">
+        <img src="images/footer/facebook.svg" alt="Facebook Icon">
+      </a>
+      <!-- <div class="footer__illustration">
+        <svg class="inline-svg" src="images/handdrawn-icons/handdrawn-paperfly.svg"></svg>
+      </div> -->
     </div>
   </div>
 

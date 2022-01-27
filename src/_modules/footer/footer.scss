@@ -15,6 +15,17 @@ $component: '.footer';
       border-top: 3px solid $neutral-darkest;
     }
 
+    &__right-side {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    &__social-icon {
+      width: 20px;
+      height: 20px;
+      margin-left: 15px;
+    }
     &__illustration {
       margin-left: auto;
       transform: scaleX(-1);
