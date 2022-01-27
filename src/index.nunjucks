@@ -46,6 +46,106 @@
   </div>
 </section>
 
+<section id="extras">
+  {{section_title.content({text: 'Extra aanbod dat we voorzien'})}}
+  <div class="section">
+      <div class="cell extra-card">
+          <h3 class="extra-card__title">Adviesgespreken</h3>
+          <p class="extra-card__text">
+            Indien er net dat tikkeltje meer informatie nodig is bij onduidelijkheden.
+          </p>
+          <div class="extra-card__divider"></div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Voor wie?
+            </div>
+            <div class="extra-card__answer">
+            Ouders met (meertalige) kinderen met taalmoeilijkheden. </br>
+            Ouders met vragen over meertalige opvoeding.
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Wat?
+            </div>
+            <div class="extra-card__answer">
+            Een ouderbespreking op maat inclusief een kort verslag.
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Prijs?
+            </div>
+            <div class="extra-card__answer">
+            € 95
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper extra-card__details-wrapper--last">
+            Voor meer informatie of bij interesse: contacteer ons vrijblijvend via ons contactformulier.
+          </div>
+      </div>
+
+      <div class="cell extra-card">
+          <h3 class="extra-card__title">Typ10 – leren typen in een handomdraai</h3>
+          <p class="extra-card__text">
+            Typ10 is een methode om op een speelse manier kinderen blind te leren typen.
+            Deze methode is speciaal ontwikkeld voor kinderen met leer- en ontwikkelingsproblemen,
+            maar is geschikt voor alle kinderen vanaf 9 jaar. Alle leerkanalen worden gelijktijdig
+            aangesproken: Er wordt gebruik gemaakt van kleuren, figuren, auditieve en visuele teksten,
+            spelletjes, invul- en denkoefeningen.
+          </p>
+          <div class="extra-card__divider"></div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Voor wie?
+            </div>
+            <div class="extra-card__answer">
+              Alle kinderen vanaf 9 jaar
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Wanneer?
+            </div>
+            <div class="extra-card__answer">
+              Gedurende de eerste week van de paasvakantie (5 lessen van 2 uur) </br>
+              Doorheen het jaar op woensdagnamiddag (10 lessen van 1 uur)
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Hoe?
+            </div>
+            <div class="extra-card__answer">
+              In kleine groepjes van maximum 5 kinderen. </br>
+              Een eigen laptop is vereist.
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Prijs?
+            </div>
+            <div class="extra-card__answer">
+            € 210 voor de volledige reeks. </br>
+            (inclusief werkboek en één jaar toegang tot het oefenplatform)
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper extra-card__details-wrapper--last">
+            Voor meer informatie of bij interesse: contacteer ons vrijblijvend via ons contactformulier.
+          </div>
+      </div>
+  </div>
+</section>
+
 <section id="steps">
   {{section_title.content({bar_color: 'secondary', text: 'Hoe start je bij ons?'})}}
   <div class="section">
@@ -74,7 +174,7 @@
 
   {% for person in site.data.team.persons%}
   <div class="cell">
-    {{ personcard.content({name: person.name, title: person.function, image: person.photo_url, number: loop.index, telephone: person.telephone })}}
+    {{ personcard.content({name: person.name, title: person.function, image: person.photo_url, number: loop.index, telephone: person.telephone, specialisations: person.specialisations})}}
   </div>
   {% endfor %}
   <div class="cell full">
