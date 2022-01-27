@@ -47,12 +47,12 @@
 </section>
 
 <section id="extras">
-  {{section_title.content({text: 'Extra aanbod dat we voorzien'})}}
+  {{section_title.content({text: 'Extra aanbod'})}}
   <div class="section">
       <div class="cell extra-card">
           <h3 class="extra-card__title">Adviesgespreken</h3>
           <p class="extra-card__text">
-            Indien er net dat tikkeltje meer informatie nodig is bij onduidelijkheden.
+            
           </p>
           <div class="extra-card__divider"></div>
 
@@ -77,7 +77,7 @@
 
           <div class="extra-card__details-wrapper">
             <div class="extra-card__question">
-              Prijs?
+              Tarief?
             </div>
             <div class="extra-card__answer">
             € 95
@@ -131,7 +131,7 @@
 
           <div class="extra-card__details-wrapper">
             <div class="extra-card__question">
-              Prijs?
+              Tarief?
             </div>
             <div class="extra-card__answer">
             € 210 voor de volledige reeks. </br>

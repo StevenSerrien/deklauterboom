@@ -2,7 +2,12 @@
   {
     "name": "problematieken",
     "href": "features"
-  },{
+  },
+  {
+    "name": "extra aanbod",
+    "href": "extras"
+  },
+  {
     "name": "Aanmelding",
     "href": "steps"
   },

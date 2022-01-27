@@ -26,7 +26,7 @@
 
             {% for special in _specialisations%}
             <div class="person__info-additional-rule">
-              <span>{{special.name}} - {{special.ref}} </span>
+              <span>{{special.name}}{%if special.ref%} - {{special.ref}} {% endif %}</span>
             </div>
             {% endfor %}
           </div>
