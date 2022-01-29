@@ -133,7 +133,7 @@ $component: '.person';
     margin: 5px 0;
   }
 
-  &:hover, &:active {
+  &:hover {
     .person {
       &__info {
         transform: scale(1);
