@@ -8,9 +8,14 @@ $component: '.person';
 
   position: relative;
 
+  @include breakpoint(medium down) {
+    width: 100%;
+  }
+
   @include breakpoint(small down) {
     margin: 0 auto;
   }
+  
 
   &__img {
     position: relative;
@@ -47,6 +52,7 @@ $component: '.person';
     transition: opacity 0.4s ease, transform 0.4s ease;
 
     &-name {
+      text-align: center;
       @include heading-3;
       transition: transform 0.2s 0.2s ease-out, opacity 0.2s 0.2s ease-out;;
       &:after {
@@ -58,11 +64,23 @@ $component: '.person';
         content: '';
         background: $neutral-dark;
       }
+
+      @include breakpoint(small down) {
+        font-size: 1rem;
+
+        &:after {
+          margin: 5px auto;
+        }
+      }
     }
 
     &-title {
       color: $neutral-dark;
       transition: transform 0.2s 0.3s ease-out, opacity 0.2s 0.3s ease-out;
+
+      @include breakpoint(300px down) {
+        font-size: 0.9rem;
+      }
     }
 
     &-additional-rule {
@@ -83,10 +101,31 @@ $component: '.person';
       transform: translateY(10px);
       opacity: 0;
     }
+
+    @include breakpoint(300px down) {
+      margin: 2.5px;
+      width: calc(100% - (2.5px * 2));
+      height: calc(100% - (2.5px * 2));
+      padding: 20px;
+    }
   }
 
   .additional-title {
-    margin-top: 50px;
+    text-align: center;
+
+
+    @include breakpoint(medium) {
+      margin-top: 50px;
+    }
+
+    @include breakpoint(small down) {
+      margin-top: 30px;
+    }
+
+    @include breakpoint(350px down) {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
   }
 
   .person__info-dots {
@@ -94,7 +133,7 @@ $component: '.person';
     margin: 5px 0;
   }
 
-  &:hover {
+  &:hover, &:active {
     .person {
       &__info {
         transform: scale(1);
