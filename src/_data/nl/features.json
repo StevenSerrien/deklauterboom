@@ -1,20 +1,32 @@
 [
   {
-    "type": "speech",
-    "icon_path": "images/handdrawn-icons/handdrawn-p-person.svg",
-    "title": "Taal- en spraakproblemen",
-    "text": "Het verwerven van de taal is een zeer belangrijk aspect in de ontwikkeling van een kind. Er is sprake van een taalprobleem wanneer de taalontwikkeling vertraagd of afwijkend is van dat van leeftijdsgenootjes. Uw kind kan ook problemen vertonen bij het uitspreken van bepaalde spraakklanken. Daarbij wordt een onderscheid gemaakt tussen fonetische articulatiestoornissen en fonologische articulatiestoornissen. "
+    "icon_path": "images/handdrawn-icons/handdrawn-p-speech.svg",
+    "title": "Taalproblemen",
+    "text": "Het verwerven van de taal is een zeer belangrijk aspect in de ontwikkeling van een kind. De ontwikkeling van de taal verloopt volgens een bepaald patroon. Er is sprake van een taalstoornis wanneer de taalontwikkeling vertraagd of afwijkend is van dat van leeftijdsgenootjes. Deze stoornis treft de ontwikkeling van de taalvorm, taalinhoud en het taalgebruik."
   },
   {
-    "type": "letters",
     "icon_path": "images/handdrawn-icons/handdrawn-p-puzzle.svg",
     "title": "Leerproblemen",
     "text": "Voor sommige kinderen verloopt het leren niet vanzelfsprekend. Als uw kind problemen vertoont bij het leren lezen, schrijven en/of rekenen, dan spreken we van een leerprobleem. Na minstens zes maanden logopedische therapie kan in samenspraak met de betrokken partijen (school, CLB, …) bekeken worden of er sprake is van een leerstoornis (dyslexie, dysorthografie, dyscalculie)."
   },
   {
-    "type": "book",
+    "icon_path": "images/handdrawn-icons/handdrawn-p-person.svg",
+    "title": "Selectief mutisme",
+    "text": "Iemand met selectief mutisme heeft angst of overmatige spanning om tespreken in bepaalde situaties, zoals bijvoorbeeld op school. Selectief mutismeis een stoornis waarbij een persoon in sommige situaties niet ‘kan’ praten,terwijl hij of zij dat in andere situaties goed kan. Deze angst kan zich opverschillende manieren uiten."
+  },
+  {
+    "icon_path": "images/handdrawn-icons/handdrawn-p-duck.svg",
+    "title": "Stotteren",
+    "text": "Stotteren is een vloeiendheidsstoornis. Deze wordt gekenmerkt door hetvoorkomen van onvrijwillige woordonderbrekingen van het spreken. Dezekunnen zich voordoen als het herhalen van klanken of woorddelen, hetaanhouden (verlengen) van klanken of het blokkeren van de stem ter hoogtevan de lippen, tong of keel. Als reactie op het stotteren zijn er somsbijbewegingen of andere gedragingen aanwezig. Deze zijn soms zichtbaar alsbewegingen in het gelaat, of van hoofd/romp/ledematen. De ernst van hetstotteren van verschillen van moment tot moment. Er zijn ook uitlokkendefactoren die hier een invloed op kunnen uitoefenen."
+  },
+  {
     "icon_path": "images/handdrawn-icons/handdrawn-p-mouth.svg",
-    "title": "Afwijkende mondgewoonten",
-    "text": "Enkele voorbeelden van dergelijke foutieve mondgewoonten zijn duim-, speen- en/of  vingerzuigen, open mondgedrag, habitueel mondademen, afwijkende tongligging in rust en tijdens het slikken. In samenwerking met de orthodont richten wij ons op het herstellen van het verstoord evenwicht in het functioneren van de mondspieren."
+    "title": "Myofunctionele stoornissen",
+    "text": "Enkele voorbeelden van afwijkende mondgewoonten zijn duim-, speen- en/ofvingerzuigen, open mondgedrag, habitueel mondademen, afwijkendetongligging in rust en tijdens het slikken. Vaak is hierdoor ook de articulatieverstoord.OMFT of oro-myofunctionele therapie is een behandeling waarbij dezeafwijkende mondgewoonten worden weggewerkt.In samenwerking met de orthodont richten wij ons op het herstellen van hetverstoord evenwicht in het functioneren van de mondspieren. Eenorthodontische behandeling heeft ten volle nut als de myofunctioneleproblemen ook opgelost worden."
+  },
+  {
+    "icon_path": "images/handdrawn-icons/handdrawn-p-ear.svg",
+    "title": "Spraakklankstoornissen",
+    "text": "Sommige kinderen vertonen problemen bij het uitspreken van bepaalde spraakklanken. Deze spraakproblemen kunnen meerdere oorzaken hebben: Er kan sprake zijn van een fonetische articulatiestoornis waarbij het kind moeilijkheden heeft met de productie van een spraakklank. Bijvoorbeeld: een /s/ die gevormd wordt met de tong tussen of tegen de tanden. Er kan ook sprake zijn van een fonologische articulatiestoornis waarbij het kind bepaalde klanken moeilijk van elkaar kan onderscheiden. Deze kinderen passen vereenvoudigingen toe in hun spraak wat vaak leidt tot onverstaanbare spraak."
   }
 ]
