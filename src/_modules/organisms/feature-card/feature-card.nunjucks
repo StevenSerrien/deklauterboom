@@ -6,11 +6,16 @@
 {% set _text = spec.text or '' %}
 {% set _icon_path = spec.icon_path or '' %}
 {% set _special = spec.special or false %}
-{% set _type = spec.type or '' %}
+{% set _inline = spec.inline or false %}
 
-<div id="{{_type}}" class="feature-card {{_class}} {{ 'feature-card--special' if _special }}">
+<div class="feature-card {{_class}} {{ 'feature-card--special' if _special }}">
   <div class="feature-card__icon">
-    <svg class="inline-svg" src="{{ _icon_path }}"></svg>
+    {%if _inline %}
+     <svg class="inline-svg" src="{{ _icon_path }}"></svg>
+    {% else %} 
+      <img src="{{ _icon_path }}"></img>
+    {% endif %}
+   
   </div>
   {# <div class="feature-card__icon">{% include "images/handdrawn-icons/handdrawn-speech.svg" %}</div> #}
   <h3 class="feature-card__title">{{ _title }}</h3>
