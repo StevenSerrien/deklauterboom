@@ -193,5 +193,15 @@ $(() => {
     Toastify(config).showToast();
   }
 
+  var checkbox = document.querySelector("input[name=conventional]");
+
+  checkbox.addEventListener('change', function() {
+    if (this.checked) {
+      console.log("Checkbox is checked..");
+    } else {
+      console.log("Checkbox is not checked..");
+    }
+  });
+
 
 });

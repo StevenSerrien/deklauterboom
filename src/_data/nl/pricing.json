@@ -1,8 +1,8 @@
 {
   "title": "Tarieven",
   "info_block": {
-    "title": "Wij zijn geconventioneerd",
-    "text": "Dit betekent dat onze tarieven bepaald worden door het Rijksinstituut voor Ziekte- en Invaliditeitsverzekering (RIZIV). De terugbetaling is steeds afhankelijk van de aard en ernst van het probleem.  In sommige situaties worden de behandelingen terugbetaald via de aanvullende verzekering. Dan gelden er dus andere terugbetalingstarieven. De tegemoetkoming die u hierbij ontvangt is afhankelijk van uw ziekenfonds. Meer informatie kan u opvragen bij uw mutualiteit."
+    "title": "Wij zijn NIET geconventioneerd",
+    "text": "Onze logopedisten zijn <span class='bold'>niet</span> geconventioneerd. Een geconventioneerde logopedist is verplicht om het wettelijk vastgelegde tarief te hanteren terwijl niet-geconventioneerde logopedisten vrij zijn om hun eigen tarief te bepalen."
   },
   "table": {
     "headers": [
