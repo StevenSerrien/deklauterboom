@@ -252,7 +252,7 @@ Hiervoor gebruiken we gebaren uit de Vlaamse Gebarentaal.
         {{ table.content({table_data: site.data.pricing.table.withoutconvention })}}
       </div>
 
-      <div class="pricingtable" id="with-convention">
+      <div class="pricingtable" id="with-convention" style="display: none;">
         {{ table.content({table_data: site.data.pricing.table.withconvention })}}
       </div>
 
