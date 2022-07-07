@@ -57,6 +57,12 @@ $component: '.info-block';
     margin-bottom: $spacer * 2;
   }
 
+  &__disclaimer {
+    margin-top: $spacer * 2;
+    color: $neutral-darker;
+    font-size: small;
+  }
+
   // &__title-sub {
   //   margin-top: $spacer * 2;
   //   margin-bottom: $spacer * 2;
