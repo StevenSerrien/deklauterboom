@@ -169,17 +169,20 @@
           Klik op de knop hiernaast om het verschil te bekijken.
           </p>
 
-          <p class="info-toggle__sub">Onderstaande prijzen zijn <span class="bold">zonder</span> tegemoetkoming.</p>
+          <p id="without-convention-title" class="info-toggle__sub pricingtabletitle">Onderstaande prijzen zijn <span class="bold">zonder tegemoetkoming.</span></p>
+          <p id="with-convention-title" class="info-toggle__sub pricingtabletitle" style="display: none;">Onderstaande prijzen zijn <span class="bold">met tegemoetkoming.</span> </p>
+
         </div>
         <div class="info-toggle__right">
           <div class="check"><input type="checkbox" class="check__check" id="conventional" name="conventional" value="conventional"><div class="check__indicator"></div></div>
         </div>
       </div>
-      <div id="without-convention">
-        {{ table.content({table_data: site.data.pricing.table })}}
+      <div class="pricingtable" id="without-convention">
+        {{ table.content({table_data: site.data.pricing.table.withoutconvention })}}
       </div>
 
-      <div id="with-convention">
+      <div class="pricingtable" id="with-convention">
+        {{ table.content({table_data: site.data.pricing.table.withconvention })}}
       </div>
 
       {{ infoblock.content({title: site.data.pricing.info_block.title, text: site.data.pricing.info_block.text, icon_path: "images/handdrawn-icons/handdrawn-p-coin.svg"})}}
