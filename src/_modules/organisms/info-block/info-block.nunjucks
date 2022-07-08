@@ -19,6 +19,16 @@
     <p>
       {{ _text }}
     </p>
+    <p class="info-block__disclaimer">
+      In sommige situaties worden de behandelingen terugbetaald via de aanvullende
+verzekering. Dan gelden er dus andere terugbetalingstarieven. De
+tegemoetkoming die u hierbij ontvangt is afhankelijk van uw ziekenfonds.
+Meer informatie kan u opvragen bij uw mutualiteit.
+    </p>
   </div>
+</div>
+
+
+
 </div>
 {% endmacro %}

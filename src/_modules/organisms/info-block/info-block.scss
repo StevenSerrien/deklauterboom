@@ -57,6 +57,18 @@ $component: '.info-block';
     margin-bottom: $spacer * 2;
   }
 
+  &__disclaimer {
+    margin-top: $spacer * 2;
+    color: $neutral-darker;
+    font-size: small;
+  }
+
+  // &__title-sub {
+  //   margin-top: $spacer * 2;
+  //   margin-bottom: $spacer * 2;
+  //   @include heading-4;
+  // }
+
 
   @include breakpoint(small down) {
     flex-direction: column;
@@ -89,4 +101,94 @@ $component: '.info-block';
   // &__content {
 
   // }
+}
+
+$card-gutters: (
+  small: 10px,
+  medium: 25px,
+  large: 40px
+);
+
+.info-toggle {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: $spacer * 4;
+
+  &__left, &__right {
+    min-height: 50px;
+    padding: 1.875rem 1.875rem;
+  }
+
+  &__left {
+    max-width: 70%;
+  }
+
+  &__right {
+    flex-grow: 1;
+    display: flex;
+    align-items: top;
+    justify-content: right;
+  }
+
+  &__title {
+    @include heading-4;
+  }
+
+  &__sub {
+    margin-top: 20px;
+  }
+
+  p {
+    @include font-weight(light);
+  }
+}
+
+.check {
+	display: inline-block;
+	height: 40px;
+	width: 80px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.check__check {
+	z-index: 2;
+	opacity: 0;
+	cursor: pointer;
+	&:checked {
+		& ~ .check__indicator {
+			background: #7befb2;
+			&:after {
+				transform: translate(40px, 0);
+			}
+		}
+	}
+}
+.check__check,
+.check__indicator {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+}
+.check__indicator {
+	background: #ececec;
+	transition: all 0.25s ease;
+	&:after {
+		height: 30px;
+		width: 30px;
+		background: #fff;
+		content: '';
+		position: absolute;
+		border-radius: 100%;
+		top: 5px;
+		left: 5px;
+		transition: transform 0.25s ease;
+	}
 }

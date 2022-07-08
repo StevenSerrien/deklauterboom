@@ -193,5 +193,24 @@ $(() => {
     Toastify(config).showToast();
   }
 
+  var checkbox = document.querySelector("input[name=conventional]");
+
+  checkbox.addEventListener('change', function() {
+    var tables = document.getElementsByClassName("pricingtable");
+    var titles = document.getElementsByClassName("pricingtabletitle");
+    for (let i = 0; i < tables.length; i++) {
+      tables[i].style.display = 'none';
+      titles[i].style.display = 'none';
+    }
+
+    if (this.checked) {
+      document.getElementById("with-convention").style.display = 'block';
+      document.getElementById("with-convention-title").style.display = 'block';
+    } else {
+      document.getElementById("without-convention").style.display = 'block';
+      document.getElementById("without-convention-title").style.display = 'block';
+    }
+  });
+
 
 });

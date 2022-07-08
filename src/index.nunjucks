@@ -40,7 +40,7 @@
   <div class="section">
   <div class="features">
     {% for feature in site.data.features %}
-      {{feature_card.content({ type: feature.type, title: feature.title, text: feature.text, icon_path: feature.icon_path, special: true if loop.first, class: 'cell' })}}
+      {{feature_card.content({ inline: feature.inline, title: feature.title, text: feature.text, icon_path: feature.icon_path, special: true if loop.first, class: 'cell' })}}
     {% endfor %}
   </div>
   </div>
@@ -143,6 +143,77 @@
             Voor meer informatie of bij interesse: contacteer ons vrijblijvend via ons contactformulier.
           </div>
       </div>
+
+      <div class="cell extra-card">
+          <h3 class="extra-card__title">Baby- en kindergebaren</h3>
+          <p class="extra-card__text">
+            In communicatie treden met je kindje nog voor het kan praten door gebruik te
+maken van gebaren. Leer hoe je leuke interactie en wederzijdse communicatie
+kan creëren, zelfs wanneer je kindje (nog) niet in staat is om te praten. 
+Hoewel een kind pas rond een jaar of anderhalf begint met praten is het
+cognitief al veel eerder in staat om te communiceren. Door je kind gebaren aan
+te leren, kun je deze periode overbruggen. Je kunt al met je kind communiceren
+voordat het kan spreken! Vanaf zes maanden gaat het kind betekenis geven aan
+de taal die het hoort en gaat dus begrijpen wat je zegt. 
+Met de Baby- en kindergebaren methode ondersteun je wat je zegt met gebaren.
+Hiervoor gebruiken we gebaren uit de Vlaamse Gebarentaal.
+          </p>
+          <div class="extra-card__divider"></div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Voor wie?
+            </div>
+            <div class="extra-card__answer">
+              Voor alle (toekomstige) ouders
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Wanneer?
+            </div>
+            <div class="extra-card__answer">
+              Kijk hier: <a href="https://gebarenstem.be/aanbod/">https://gebarenstem.be/aanbod/</a>
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Wat?
+            </div>
+            <div class="extra-card__answer">
+              Keuze uit volgende cursusmogelijkheden: </br> </br>
+
+              • <span class="bold">Een kennismakingscursus</span>: één korte bijeenkomst.
+                Je leert een aantal gebaren en krijgt een korte uitleg
+                over de basis van het Baby- en
+                kindergebarenprogramma.
+
+                </br>
+                </br>
+              • <span class="bold">Een 3-delige oudercursus</span>: Je leert de volledige
+                baby- en kindergebarenmethode op 3 dagen. Je
+                leert alvast je eerste 50 gebaren tijdens de eerste
+                sessie en kan hier meteen mee aan de slag.
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper">
+            <div class="extra-card__question">
+              Tarief?
+            </div>
+            <div class="extra-card__answer">
+            Kennismakingscursus: € 15 per persoon</br>
+            Een 3-delige oudercursus: € 108,90 per ouderkoppel
+            (Gebarenboekje inbegrepen)
+            </div>
+          </div>
+
+          <div class="extra-card__details-wrapper extra-card__details-wrapper--last">
+            Voor meer informatie of bij interesse: contacteer ons vrijblijvend via ons contactformulier.
+          </div>
+      </div>
   </div>
 </section>
 
@@ -161,10 +232,33 @@
   {{section_title.content({text: site.data.pricing.title })}}
   <div class="section">
     <div class="pricing">
-      {{ table.content({table_data: site.data.pricing.table })}}
+      <div class='info-toggle'>
+        <div class="info-toggle__left">
+          <h3 class="info-toggle__title">Heb jij een verhoogde tegemoetkoming?</h3>
+          <p>Dan gelden voor jou wel de wettelijk vastgestelde tarieven, of je logopedist nu
+          geconventioneerd is of niet. </br>
+          Klik op de knop hiernaast om het verschil te bekijken.
+          </p>
+
+          <p id="without-convention-title" class="info-toggle__sub pricingtabletitle">Onderstaande prijzen zijn <span class="bold">zonder tegemoetkoming.</span></p>
+          <p id="with-convention-title" class="info-toggle__sub pricingtabletitle" style="display: none;">Onderstaande prijzen zijn <span class="bold">met tegemoetkoming.</span> </p>
+
+        </div>
+        <div class="info-toggle__right">
+          <div class="check"><input type="checkbox" class="check__check" id="conventional" name="conventional" value="conventional"><div class="check__indicator"></div></div>
+        </div>
+      </div>
+      <div class="pricingtable" id="without-convention">
+        {{ table.content({table_data: site.data.pricing.table.withoutconvention })}}
+      </div>
+
+      <div class="pricingtable" id="with-convention" style="display: none;">
+        {{ table.content({table_data: site.data.pricing.table.withconvention })}}
+      </div>
 
       {{ infoblock.content({title: site.data.pricing.info_block.title, text: site.data.pricing.info_block.text, icon_path: "images/handdrawn-icons/handdrawn-p-coin.svg"})}}
     </div>
+    
   </div>
 </section>
 
