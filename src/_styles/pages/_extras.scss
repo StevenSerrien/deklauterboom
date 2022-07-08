@@ -70,6 +70,7 @@ $card-gutters: (
 
         &__question {
             flex-basis: 20%;
+            min-width: 20%;
         }
 
         &__answer, &__question {

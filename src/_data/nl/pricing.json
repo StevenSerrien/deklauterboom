@@ -1,70 +1,135 @@
 {
   "title": "Tarieven",
   "info_block": {
-    "title": "Wij zijn geconventioneerd",
-    "text": "Dit betekent dat onze tarieven bepaald worden door het Rijksinstituut voor Ziekte- en Invaliditeitsverzekering (RIZIV). De terugbetaling is steeds afhankelijk van de aard en ernst van het probleem.  In sommige situaties worden de behandelingen terugbetaald via de aanvullende verzekering. Dan gelden er dus andere terugbetalingstarieven. De tegemoetkoming die u hierbij ontvangt is afhankelijk van uw ziekenfonds. Meer informatie kan u opvragen bij uw mutualiteit."
+    "title": "Wij zijn NIET geconventioneerd",
+    "text": "Onze logopedisten zijn <span class='bold'>niet</span> geconventioneerd. Een geconventioneerde logopedist is verplicht om het wettelijk vastgelegde tarief te hanteren terwijl niet-geconventioneerde logopedisten vrij zijn om hun eigen tarief te bepalen."
   },
   "table": {
-    "headers": [
-      {
-        "def": "col_1",
-        "title": "honorarium"
-      },
-      {
-        "def": "col_2",
-        "title": "terugbetaling"
-      },
-      {
-        "def": "col_3",
-        "title": "verhoogde terugbetaling"
-      }
-    ],
-    "rows": [
-      {
-        "type": {
-          "title": "Aanvangsbilan",
-          "sublabel": "30 minuten"
+    "withoutconvention": {
+      "headers": [
+        {
+          "def": "col_1",
+          "title": "honorarium"
         },
-        "col_1": "33,16",
-        "col_2": "25,66",
-        "col_3": "30,16"
-      },
-      {
-        "type": {
-          "title": "Therapie op praktijk",
-          "sublabel": "30 minuten"
+        {
+          "def": "col_2",
+          "title": "terugbetaling"
         },
-        "col_1": "28,33",
-        "col_2": "22,83",
-        "col_3": "26,33"
-      },
-      {
-        "type": {
-          "title": "Therapie op school",
-          "sublabel": "30 minuten"
+        {
+          "def": "col_3",
+          "title": "remgeld"
+        }
+      ],
+      "rows": [
+        {
+          "type": {
+            "title": "Aanvangsbilan",
+            "sublabel": "30 minuten"
+          },
+          "col_1": "40,54",
+          "col_2": "26,78",
+          "col_3": "13,76"
         },
-        "col_1": "27,36",
-        "col_2": "21,36",
-        "col_3": "25,36"
-      },
-      {
-        "type": {
-          "title": "Therapie op praktijk",
-          "sublabel": "60 minuten"
+        {
+          "type": {
+            "title": "Therapie op praktijk",
+            "sublabel": "30 minuten"
+          },
+          "col_1": "33,40",
+          "col_2": "23,78",
+          "col_3": "9,62"
         },
-        "col_1": "56,89",
-        "col_2": "45,89",
-        "col_3": "52,39"
-      },
-      {
-        "type": {
-          "title": "Evolutiebilan"
+        {
+          "type": {
+            "title": "Therapie op school",
+            "sublabel": "30 minuten"
+          },
+          "col_1": "33,40",
+          "col_2": "22,28",
+          "col_3": "11,12"
         },
-        "col_1": "47,27",
-        "col_2": "36,27",
-        "col_3": "42,77"
-      }
-    ],
-    "currency": "€"
+        {
+          "type": {
+            "title": "Therapie op praktijk",
+            "sublabel": "60 minuten"
+          },
+          "col_1": "67,07",
+          "col_2": "47,81",
+          "col_3": "19,26"
+        },
+        {
+          "type": {
+            "title": "Evolutiebilan"
+          },
+          "col_1": "66,80",
+          "col_2": "37,86",
+          "col_3": "28,94"
+        }
+      ],
+      "currency": "€"
+    },
+    "withconvention": {
+      "headers": [
+        {
+          "def": "col_1",
+          "title": "honorarium"
+        },
+        {
+          "def": "col_2",
+          "title": "terugbetaling"
+        },
+        {
+          "def": "col_3",
+          "title": "remgeld"
+        }
+      ],
+      "rows": [
+        {
+          "type": {
+            "title": "Aanvangsbilan",
+            "sublabel": "30 minuten"
+          },
+          "col_1": "34,28",
+          "col_2": "31,28",
+          "col_3": "3,00"
+        },
+        {
+          "type": {
+            "title": "Therapie op praktijk",
+            "sublabel": "30 minuten"
+          },
+          "col_1": "29,28",
+          "col_2": "27,28",
+          "col_3": "2,00"
+        },
+        {
+          "type": {
+            "title": "Therapie op school",
+            "sublabel": "30 minuten"
+          },
+          "col_1": "28,28",
+          "col_2": "26,28",
+          "col_3": "2,00"
+        },
+        {
+          "type": {
+            "title": "Therapie op praktijk",
+            "sublabel": "60 minuten"
+          },
+          "col_1": "58,81",
+          "col_2": "54,31",
+          "col_3": "4,50"
+        },
+        {
+          "type": {
+            "title": "Evolutiebilan"
+          },
+          "col_1": "48,86",
+          "col_2": "44,36",
+          "col_3": "4,50"
+        }
+      ],
+      "currency": "€"
+    }
   }
 }
