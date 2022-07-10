@@ -43,7 +43,7 @@
       {{feature_card.content({ inline: feature.inline, title: feature.title, text: feature.text, icon_path: feature.icon_path, special: true if loop.first, class: 'cell' })}}
     {% endfor %}
      
-     
+
   </div>
   </div>
 </section>
@@ -242,8 +242,8 @@ Hiervoor gebruiken we gebaren uit de Vlaamse Gebarentaal.
           Klik op de knop hiernaast om het verschil te bekijken.
           </p>
 
-          <p id="without-convention-title" class="info-toggle__sub pricingtabletitle">Onderstaande prijzen zijn <span class="bold">zonder tegemoetkoming.</span></p>
-          <p id="with-convention-title" class="info-toggle__sub pricingtabletitle" style="display: none;">Onderstaande prijzen zijn <span class="bold">met tegemoetkoming.</span> </p>
+          <p id="without-convention-title" class="info-toggle__sub pricingtabletitle">Onderstaande prijzen zijn <span class="bold">zonder verhoogde tegemoetkoming.</span></p>
+          <p id="with-convention-title" class="info-toggle__sub pricingtabletitle" style="display: none;">Onderstaande prijzen zijn <span class="bold">met verhoogde tegemoetkoming.</span> </p>
 
         </div>
         <div class="info-toggle__right">
