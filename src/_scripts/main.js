@@ -189,8 +189,9 @@ $(() => {
     var config = toastConfig;
     config.text = text;
     config.className = type;
-
+    
     Toastify(config).showToast();
+    $('.toastify').html(text);
   }
 
   var checkbox = document.querySelector("input[name=conventional]");
