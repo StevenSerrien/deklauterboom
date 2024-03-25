@@ -258,7 +258,7 @@ Hiervoor gebruiken we gebaren uit de Vlaamse Gebarentaal.
         {{ table.content({table_data: site.data.pricing.table.withconvention })}}
       </div>
 
-      <a href='tarieven.pdf'>Tarievenfiche vanaf 2024</a>
+      <a href='tarieven.pdf' target="_blank">Tarievenfiche vanaf 2024</a>
       
       {{ infoblock.content({title: site.data.pricing.info_block.title, text: site.data.pricing.info_block.text, icon_path: "images/handdrawn-icons/handdrawn-p-coin.svg"})}}
     </div>
