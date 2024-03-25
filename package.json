@@ -68,7 +68,7 @@
     "format": "npx prettier --single-quote --write src/**/*.js",
     "serve": "NODE_ENV=development npx gulp serve",
     "serve:prod": "NODE_ENV=production npx gulp serve --production",
-    "build": "NODE_ENV=production npx gulp --production && npx cp CNAME docs/CNAME"
+    "build": "NODE_ENV=production npx gulp --production && npx cp CNAME docs/CNAME && npx cp tarieven.pdf docs/tarieven.pdf"
   },
   "engines": {
     "node": ">=8.16.0"
