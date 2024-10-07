@@ -13,7 +13,10 @@
         {"name": "De cyclische aanpak van Hodson en Paden", "ref": "I. Muris &amp; Y. Draaisma"},
         {"name": "OMFT-traject", "ref": "Let’s Speak Academy"},
         {"name": "Spraakmotorische stoornissen herkennen en behandelen", "ref": "Sterk Academy"},
-        {"name": "De logopedische behandeling bij Selectief Mutisme", "ref": "Academy De Taaltoren", "conditonal": true}
+        {"name": "De logopedische behandeling bij Selectief Mutisme", "ref": "Academy De Taaltoren", "conditonal": true},
+        {"name": "Studiedag Tongriemproblematiek", "ref": "Let's Speak Academy", "conditonal": false},
+        {"name": "De Spraakbooster XL", "ref": "Sterk Academy", "conditonal": true},
+        {"name": "Metaphon, behandeling van kinderen met fonologische stoornissen", "ref": "Yvette Ribbe", "conditonal": true}
       ]
     },
     {

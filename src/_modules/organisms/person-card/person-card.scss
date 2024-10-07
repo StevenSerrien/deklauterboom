@@ -148,6 +148,26 @@ $component: '.person';
 
 
   &--1 {
+
+    .person {
+      &__info-title {
+        @include breakpoint(small down) {
+          left: -20%;
+          bottom: -10%;
+
+        margin-top: 2.5px;
+      }
+      &.additional-title {
+        margin-top: 10px;
+      }
+      }
+      &__info-additional-rule {
+        font-size: 0.65rem;
+      }
+    }
+
+
+
     &::after {
       height: 15px;
       width: 100%;
